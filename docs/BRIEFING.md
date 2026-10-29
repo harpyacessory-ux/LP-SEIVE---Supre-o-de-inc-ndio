@@ -153,6 +153,16 @@ A pedido do usuário, Header e Hero seguem o mockup claro enviado em 29/10/2026 
 - Ícone novo no catálogo: `excavator`. O preload do LCP em `Layout.astro` usa o mesmo `sizes` da foto do hero.
 - A assinatura A8 de `scripts/check-lp.mjs` foi repinada para essa abertura.
 
+## Desvio aprovado: seção do kit no mockup da Safe Mine (29/10/2026)
+
+A pedido do usuário, `src/components/sections/ProductLines.astro` (seção `linhas`) segue o mockup "SEIVE Fire Suppression Components & Support.png":
+
+- Cabeçalho com o título grande e traço verde à esquerda e o texto à direita, separados por uma linha.
+- Três cards claros (chip verde, foto grande, título, descrição e checks), sem índice e sem rodapé de CTA visível. Cada card é inteiro clicável por um botão sem texto que o cobre (`data-cta="linhas-{id}"`, rótulo em `aria-label`), para manter o rastreio por item.
+- O item escuro (`dark: true`, pós-venda) virou a faixa azul em largura total abaixo dos cards, com a família de reservatórios recortada, "Suporte para manter seu sistema ativo.", três checks e o CTA "Falar com especialista" em pílula.
+- Copy de `linhas` atualizada na ficha e no arquivo de dados conforme o mockup; o contrato do manifesto continua atendido (4 itens, um escuro, 3 features cada).
+- **Atenção:** `npm run compose` sobrescreve este componente com o da biblioteca. Se a LP for recomposta, restaure-o do git depois do compose.
+
 ## Desvios técnicos da execução
 
 - `npm run screens` falha nesta pasta: o script monta o comando com `shell: true` e o caminho tem espaços. As capturas foram feitas com os mesmos parâmetros (porta 4873, Playwright 1.58.2, `?screens=1` e `?grid=1`), com caminho relativo e 5 s de espera.

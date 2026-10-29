@@ -124,42 +124,43 @@ blocos:
     papeis: [Gestores de manutenção, Gestores de frotas]
     eyebrow: Kit de Incêndio SEIVE
     title: O que compõe o sistema
-    text: O Kit de Incêndio SEIVE reúne reservatório, detecção e acionadores para proteger máquinas pesadas e equipamentos móveis.
+    # Copy do mockup da seção do kit (29/10/2026, desvio registrado no BRIEFING.md)
+    text: Reservatório, monitoramento e acionadores integrados para proteger máquinas pesadas e equipamentos móveis.
     items:
       - id: reservatorio
         tag: Supressão
         title: Reservatório de pó químico
-        description: Reservatório de 15 kg com pó químico ABC 90%, pressurizado por nitrogênio.
+        description: Pó químico ABC 90%, com pressurização por nitrogênio.
         features:
+          - Reservatório de 15 kg
           - Pó químico ABC 90%
-          - Pressão de trabalho 21 kg
-          - Cilindro de nitrogênio 320 g
+          - Cilindro de nitrogênio de 320 g
         photo: Reservatório de pó químico SEIVE
         dark: false
       - id: monitoramento
-        tag: Detecção
+        tag: Monitoramento
         title: Painel de monitoramento
-        description: Painel 12/24 VCC com LEDs de status, que registra os últimos 2.000 eventos.
+        description: Sinalização visual de status e registro dos eventos do sistema.
         features:
           - Bivolt 12/24 VCC
           - LEDs de status
-          - Registro de eventos
+          - Registro dos últimos 2.000 eventos
         photo: Painel de monitoramento SEIVE
         dark: false
       - id: acionadores
         tag: Acionamento
         title: Acionadores automático e manual
-        description: Acionador automático na cabine e acionador manual externo de alumínio.
+        description: Acionamento na cabine e acionador manual externo de alumínio.
         features:
           - Acionamento automático
           - Acionador manual externo
-          - Cilindro de ativação N2
-        photo: Acionador SEIVE vermelho
+          - Cilindro de ativação N₂
+        photo: Acionador manual SEIVE
         dark: false
       - id: pecas
-        tag: Pós-venda
-        title: Peças genuínas e suporte
-        description: Peças genuínas SEIVE e suporte técnico especializado para manter o sistema ativo.
+        tag: Peças e suporte
+        title: Suporte para manter seu sistema ativo.
+        description: Peças genuínas SEIVE e atendimento técnico especializado.
         features:
           - Peças genuínas
           - Suporte especializado
