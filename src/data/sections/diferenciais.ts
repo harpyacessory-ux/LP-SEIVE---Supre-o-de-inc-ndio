@@ -21,10 +21,10 @@ export interface Reason {
 }
 
 export const why = {
-  eyebrow: `Por que a ${site.brandShort}`,
+  eyebrow: 'Diferenciais SEIVE',
   /** Cada item é uma linha do H2 (quebra forçada). 3–6 palavras no total. */
-  titleLines: ['Tecnologia SEIVE,', 'atendimento Safe Mine.'],
-  text: `A ${site.brandShort} conecta a sua operação ao sistema SEIVE, primeiro supressor certificado pela ABNT no Brasil e com mais de 6.000 instalações segundo a fabricante, do diagnóstico ao suporte técnico.`,
+  titleLines: ['Proteção de ativos', 'com tecnologia SEIVE.'],
+  text: `A ${site.brandShort} fornece o sistema SEIVE com atendimento consultivo — a solução é indicada conforme a máquina, a aplicação e o ambiente de cada operação.`,
   scene: {
     src: cenario,
     alt: 'Acionador SEIVE instalado em máquina',
@@ -35,29 +35,29 @@ export const why = {
   },
   reasons: [
     {
-      icon: 'users',
-      title: 'Atendimento consultivo',
-      description: 'Análise de cada operação para indicar a solução compatível.',
+      icon: 'zap',
+      title: 'Detecção e atuação',
+      description: 'Atuação automática conforme a configuração do sistema.',
+    },
+    {
+      icon: 'power',
+      title: 'Acionamento manual',
+      description: 'Possibilidade de intervenção manual por botoeiras.',
+    },
+    {
+      icon: 'cpu',
+      title: 'Painel de monitoramento',
+      description: 'Status do sistema e registro dos últimos 2.000 eventos.',
     },
     {
       icon: 'shield',
-      title: 'Tecnologia certificada',
-      description: 'Sistema SEIVE patenteado e certificado pela ABNT desde 2012.',
+      title: 'Garantia de fábrica',
+      description: '12 meses contra defeito de fabricação.',
     },
     {
-      icon: 'check',
-      title: 'Normas internacionais',
-      description: 'Atende a requisitos da NFPA 17, NFPA 122 e UL 1254.',
-    },
-    {
-      icon: 'clock',
-      title: 'Garantia estendida',
-      description: 'Painel 24 meses, ampolas 10 anos e reservatórios 5 anos.',
-    },
-    {
-      icon: 'pin',
-      title: 'Atuação nacional',
-      description: 'Atendimento a operações em todo o território nacional.',
+      icon: 'wrench',
+      title: 'Suporte técnico',
+      description: 'Canal técnico direto durante o período de garantia.',
     },
   ],
 } as const satisfies {

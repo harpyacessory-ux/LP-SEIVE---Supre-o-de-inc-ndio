@@ -4,109 +4,104 @@
 >
 > Nada aqui é perguntado ao usuário. Se um campo não puder ser preenchido a partir da ficha, a execução para e recusa, em vez de deixar lacuna.
 
-> **Desvio de processo desta LP:** não houve conversa de chat com o `PROMPT-FICHA-LP.md`. A ficha foi montada no editor, em 29/10/2026, a partir do material do cliente e do fabricante e do POP de estruturação de LPs da B2. Tudo o que dependia de confirmação do cliente virou pendência declarada abaixo, e não valor inventado.
+> **Desvio de processo desta LP:** não houve conversa de chat com o `PROMPT-FICHA-LP.md`. A ficha foi montada no editor, em 29/10/2026, a partir do briefing de campanha organizado, do material do cliente e do fabricante e do POP de estruturação de LPs da B2. O que dependia de confirmação virou pendência declarada abaixo, não valor inventado.
 
 ## Origem
 
-| Campo                     | Valor                                                                                                                                                                                           |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ficha de execução         | `docs/FICHA-LP.md`                                                                                                                                                                              |
-| Data da ficha             | 2026-10-29                                                                                                                                                                                      |
-| Versão do padrão na ficha | 2.8.0                                                                                                                                                                                           |
-| Validada em               | 29/10/2026 por `npm run ficha`                                                                                                                                                                  |
-| Material bruto do cliente | `docs/briefing-cliente/` (fora do git): apresentação "Seive Supressor 2026" (fabricante) e POP de estruturação de LPs (B2); sites safeminesolucoes.com.br (cliente) e seive.com.br (fabricante) |
-| Briefing de campanha      | não — a conta Google Ads da Safe Mine (446-892-6092) existe no MCC da B2, mas sem campanhas                                                                                                     |
-| Fora desta execução       | demais produtos da Safe Mine (geradores, BESS, torres de iluminação, lubrificação, bombas, compressores) — cada um é outra LP                                                                   |
+| Campo                     | Valor                                                                                                                                                                                                                 |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ficha de execução         | `docs/FICHA-LP.md`                                                                                                                                                                                                    |
+| Data da ficha             | 2026-10-29                                                                                                                                                                                                            |
+| Versão do padrão na ficha | 2.8.0 — o briefing cita v2.9.0, que não existe no repositório do starter                                                                                                                                              |
+| Validada em               | 29/10/2026 por `npm run ficha`                                                                                                                                                                                        |
+| Material bruto do cliente | `docs/briefing-cliente/` (fora do git): apresentação "Seive Supressor 2026" e POP de LPs; "briefing-organizado-seive-kit-incendio.md" (28/10/2026, enviado na conversa); sites safeminesolucoes.com.br e seive.com.br |
+| Briefing de campanha      | sim, campanha `SEIVE_PESQ_SUPRESSAO_B2B`, grupos "Supressão em máquinas" e "Supressão em equipamentos móveis"                                                                                                         |
+| Fora desta execução       | grupo "Supressão náutica" (LSI Náutico) e lubrificação automática                                                                                                                                                     |
 
-**Cliente e fabricante.** A Safe Mine Soluções (Belo Horizonte/MG, desde 2017) é quem anuncia: revende e especifica, de forma consultiva, o sistema de supressão de incêndio fabricado pela SEIVE (Contagem/MG). Fabricação, certificação, normas, garantia por componente e número de instalações são fatos da SEIVE e aparecem atribuídos a ela.
+**Cliente e fabricante.** O briefing de campanha foi organizado só com o material da SEIVE e traz a SEIVE no núcleo (marca, endereço em Contagem/MG, WhatsApp). O cliente informado na conversa é a **Safe Mine Soluções** (Belo Horizonte/MG), que revende e especifica o sistema SEIVE. A LP é da Safe Mine; a SEIVE aparece como fabricante, por extenso. **Confirmar com a B2 antes de ativar a campanha.**
 
 ## Campanha
 
-| Campo                      | Valor                                                                                                                                                |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Palavra-chave principal    | `sistema de supressão de incêndio` — no H1 e no title                                                                                                |
-| Origem                     | Planejador de Palavras-chave, Brasil, out/2025–set/2026: 140 buscas/mês, concorrência média (`supressão de incêndio` 50; `supressor de incêndio` 30) |
-| Área atendida              | nacional; o selo "Atendimento em todo o Brasil" fica na cotação                                                                                      |
-| Negativas de oferta        | cozinha, coifa, sprinkler, hidrante                                                                                                                  |
-| Claims proibidos           | autorizado/autorizada, distribuidor oficial, representante oficial, exclusivo/exclusiva, líder, a única do Brasil, único no mundo                    |
-| Divergência de vocabulário | a SEIVE diz "supressor de incêndio" e "kit incêndio"; a busca de maior volume é "sistema de supressão de incêndio", que abriu a página               |
+| Campo                      | Valor                                                                                                                                                                                               |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Palavra-chave principal    | `supressão de incêndio SEIVE` — no H1 e no title                                                                                                                                                    |
+| Origem                     | briefing de campanha                                                                                                                                                                                |
+| Área atendida              | não declarada na página — o briefing pede confirmar a cobertura antes de usá-la em hero, selo ou cotação                                                                                            |
+| Negativas de oferta        | extintor doméstico, extintor automotivo avulso, mangueira de incêndio, alarme residencial, detector de fumaça casa, central de alarme, detecção para data center, sistema de lubrificação           |
+| Negativas de intenção      | curso de bombeiro, corpo de bombeiros concurso, como apagar fogo, projeto escolar incêndio (só registro)                                                                                            |
+| Claims proibidos           | promessas absolutas de risco eliminado ou de perdas evitadas (em `campaign.forbidden` como "risco zero", "elimina o risco", "evita perdas"…), mais autorizado/oficial/exclusivo e superlativos      |
+| Divergência de vocabulário | o cliente diz "Sistema Supressor" e "Kit de Incêndio SEIVE"; a campanha compra "sistema de supressão de incêndio" e "supressão para máquinas pesadas/equipamentos móveis" — H1 no termo da campanha |
 
 ### Famílias de palavra-chave
 
-| Família               | Termos                                                                                            | Bloco que responde | Status  |
-| --------------------- | ------------------------------------------------------------------------------------------------- | ------------------ | ------- |
-| sistema-supressao     | sistema de supressão de incêndio, supressão de incêndio, supressor de incêndio                    | `linhas`           | coberta |
-| maquinas              | supressão de incêndio em máquinas, combate a incêndio em máquinas, supressão de incêndio veicular | `linhas`           | coberta |
-| alarme-deteccao       | sistema de alarme e detecção de incêndio, detecção de incêndio para sala elétrica                 | `linhas`           | coberta |
-| setores               | supressão de incêndio para mineração, supressor de incêndio colheitadeira                         | `segmentos`        | coberta |
-| instalacao-manutencao | instalação de sistema de supressão de incêndio, manutenção de sistema de supressão de incêndio    | `processo`         | coberta |
-
-As famílias além da principal não têm volume medido no Planejador: são proposta para a estrutura da campanha.
+| Família               | Termos                                                                                                                                                           | Bloco que responde | Status  |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------- |
+| produto-categoria     | sistema de supressão de incêndio; supressão de incêndio SEIVE                                                                                                    | `linhas`           | coberta |
+| equipamento-aplicacao | supressão para máquinas pesadas; supressão para equipamentos móveis; proteção contra incêndio máquinas industriais; sistema automático combate incêndio máquinas | `aplicacoes`       | coberta |
+| setor                 | sistema de supressão de incêndio mineração                                                                                                                       | `aplicacoes`       | coberta |
+| transacional          | cotação sistema supressão incêndio                                                                                                                               | `identificar`      | coberta |
 
 ### Comitê de compra
 
-| Papel                 | Argumento de compra                                    | Bloco que responde                       | Status  |
-| --------------------- | ------------------------------------------------------ | ---------------------------------------- | ------- |
-| Manutenção de frota   | atuação automática, menos máquina parada               | `processo`, `segmentos`, `perguntas`     | coberto |
-| Segurança do trabalho | proteção de operador e patrimônio, normas              | `segmentos`, `perguntas`, `diferenciais` | coberto |
-| Engenharia            | dimensionamento por equipamento, especificação técnica | `linhas`, `processo`                     | coberto |
-| Compras               | garantia, venda direta, atendimento nacional           | `linhas`, `perguntas`, `diferenciais`    | coberto |
-
-Papéis propostos na ficha; confirmar com a Safe Mine.
+| Papel                | Argumento de compra | Bloco que responde                      | Status                                       |
+| -------------------- | ------------------- | --------------------------------------- | -------------------------------------------- |
+| Gestor de manutenção | ausente no briefing | `linhas`, `identificar`, `diferenciais` | coberto pelo conteúdo; argumento a confirmar |
+| Gestor de segurança  | ausente no briefing | `aplicacoes`, `diferenciais`            | coberto pelo conteúdo; argumento a confirmar |
+| Gestor de frotas     | ausente no briefing | `linhas`, `identificar`, `aplicacoes`   | coberto pelo conteúdo; argumento a confirmar |
 
 ### Conteúdo futuro
 
-| Grupo                 | O que oferece                | Por que está fora                              |
-| --------------------- | ---------------------------- | ---------------------------------------------- |
-| Supressor náutico LSI | linha SEIVE para embarcações | não consta na página de supressão da Safe Mine |
+| Grupo             | O que oferece            | Por que está fora           |
+| ----------------- | ------------------------ | --------------------------- |
+| Supressão náutica | LSI Náutico, embarcações | fora do recorte da campanha |
 
 ## Composição
 
-Derivada em: 29/10/2026 · comando aplicado: `npm run compose -- linhas processo segmentos perguntas diferenciais`
+Derivada em: 29/10/2026 · comando aplicado: `npm run compose -- linhas identificar aplicacoes diferenciais`
 
 ### Seções que entraram
 
-| Fase       | Seção          | Fundo     | Respiro     | Veredicto na ficha | Famílias que responde                        |
-| ---------- | -------------- | --------- | ----------- | ------------------ | -------------------------------------------- |
-| oferta     | `linhas`       | branco    | pt-20 pb-10 | completo           | sistema-supressao, maquinas, alarme-deteccao |
-| apoio      | `processo`     | branco    | pt-6 pb-16  | completo · navy    | instalacao-manutencao                        |
-| prova      | `segmentos`    | branco    | pt-6 pb-10  | completo           | setores                                      |
-| autoridade | `perguntas`    | cinza-100 | py-16       | completo           | —                                            |
-| autoridade | `diferenciais` | cinza-100 | pt-6 pb-8   | completo · navy    | —                                            |
+| Fase       | Seção          | Fundo     | Respiro     | Veredicto na ficha | Famílias que responde                    |
+| ---------- | -------------- | --------- | ----------- | ------------------ | ---------------------------------------- |
+| oferta     | `linhas`       | branco    | pt-20 pb-10 | completo           | produto-categoria                        |
+| apoio      | `identificar`  | branco    | pt-6 pb-16  | completo · navy    | transacional                             |
+| prova      | `aplicacoes`   | cinza-100 | pt-4 pb-20  | completo           | equipamento-aplicacao, setor             |
+| autoridade | `diferenciais` | cinza-100 | pt-6 pb-8   | completo · navy    | produto-categoria, equipamento-aplicacao |
 
-`perguntas` entrou por desempate de papéis (3 contra 2 de `diferenciais`), e `diferenciais` veio junto como portador navy da fase.
+Diferenças em relação aos veredictos do briefing organizado: `linhas` (componentes do kit, com fotos da apresentação) e `aplicacoes` (fotos da apresentação e do site da SEIVE) passaram a completos com o material reunido nesta execução; `segmentos` e `perguntas` também fecham a contagem, mas perderam pela regra fixa.
 
 ### Blocos que ficaram fora
 
-| Bloco            | Veredicto     | O que falta para entrar                                                                           |
-| ---------------- | ------------- | ------------------------------------------------------------------------------------------------- |
-| `clientes`       | insuficiente  | logos e números da apresentação são da SEIVE; faltam 4 logos autorizadas e 3 números da Safe Mine |
-| `identificar`    | insuficiente  | os 6 dados que o comercial pede para dimensionar um sistema                                       |
-| `situacoes`      | insuficiente  | gatilhos de contato reais do comercial (a compra é preventiva)                                    |
-| `especificacoes` | insuficiente  | 4 modelos com atributos comparáveis; só há o kit de 15 kg                                         |
-| `vitrine`        | insuficiente  | 6 a 24 produtos; há 2 sistemas                                                                    |
-| `aplicacoes`     | insuficiente  | 4 aplicações com fotos distintas dos segmentos                                                    |
-| `escopo`         | não se aplica | não é consolidação de compras                                                                     |
+| Bloco            | Veredicto     | O que falta para entrar                                                |
+| ---------------- | ------------- | ---------------------------------------------------------------------- |
+| `processo`       | quase         | sequência real, responsável por etapa e marcos públicos                |
+| `segmentos`      | completo      | perdeu para `aplicacoes` (responde a menos famílias)                   |
+| `perguntas`      | completo      | perdeu para `diferenciais`, que já é o portador navy da fase           |
+| `clientes`       | insuficiente  | logos e números da apresentação são da SEIVE, sem autorização expressa |
+| `situacoes`      | insuficiente  | gatilhos de contato reais do comercial                                 |
+| `especificacoes` | insuficiente  | 4 a 10 modelos ou configurações comparáveis                            |
+| `vitrine`        | insuficiente  | 6 a 24 produtos                                                        |
+| `escopo`         | não se aplica | não é consolidação de compras                                          |
 
 ## Entradas do núcleo
 
-| #   | Entrada                 | Valor                                                                                    | Origem                                               |
-| --- | ----------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| 1   | MARCA                   | Safe Mine Soluções                                                                       | site do cliente                                      |
-| 2   | MARCA_CURTA             | Safe Mine                                                                                | site do cliente                                      |
-| 3   | PRODUTO_PRINCIPAL       | Sistemas de supressão de incêndio                                                        | ajustado à palavra-chave                             |
-| 4   | CONTEXTO_DE_USO         | máquinas e equipamentos                                                                  | página de supressão do cliente                       |
-| 5   | PUBLICO                 | Manutenção de frota, Segurança do trabalho, Engenharia, Compras                          | proposto — confirmar                                 |
-| 6   | HERO                    | Sistema SEIVE certificado ABNT · Atuação automática em até 15 s · Atendimento consultivo | páginas do cliente e do fabricante                   |
-| 7   | MARCAS_ATENDIDAS        | SEIVE, só por extenso                                                                    | logo da SEIVE sem autorização registrada             |
-| 8   | SELOS_DE_CONFIANCA      | Garantia de 12 meses · Suporte técnico especializado · Atendimento em todo o Brasil      | páginas do cliente                                   |
-| 9   | ENDERECO                | Belo Horizonte/MG                                                                        | "Quem somos" do cliente — endereço completo pendente |
-| 10  | URL_FINAL + PRIVACIDADE | `https://lp-seive-supressao-de-incendio.vercel.app/` (provisória); sem política          | pendência                                            |
-| 11  | SHORTCODES              | `[atendimento_chat id="default"]` · `[atendimento_form id="default-form"]`               | default do padrão                                    |
-| 12  | WHATSAPP                | 5531995538843 (botão "Orçamento por WhatsApp" do site)                                   | site do cliente                                      |
-| 13  | STACK + PUBLICACAO      | Astro, `main` → `wp-build`                                                               | default do padrão                                    |
-| 14  | TOKENS_DE_COR + FONTE   | azul #163b99 (navy #102c73), verde #7ba249 escurecido para #4d7f22; Manrope              | CSS do site do cliente                               |
-| 15  | CAMPANHA                | `sistema de supressão de incêndio`                                                       | Planejador de Palavras-chave                         |
+| #   | Entrada                 | Valor                                                                                                          | Origem                                                 |
+| --- | ----------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| 1   | MARCA                   | Safe Mine Soluções                                                                                             | cliente informado; o briefing dizia SEIVE              |
+| 2   | MARCA_CURTA             | Safe Mine                                                                                                      | site do cliente                                        |
+| 3   | PRODUTO_PRINCIPAL       | Sistemas de supressão de incêndio SEIVE                                                                        | briefing (título do anúncio)                           |
+| 4   | CONTEXTO_DE_USO         | máquinas pesadas                                                                                               | briefing (título do anúncio)                           |
+| 5   | PUBLICO                 | Gestores de manutenção, de segurança e de frotas                                                               | briefing                                               |
+| 6   | HERO                    | Sistemas SEIVE para máquinas pesadas · Proteção automatizada para equipamentos móveis · Solução para mineração | briefing                                               |
+| 7   | MARCAS_ATENDIDAS        | SEIVE, só por extenso                                                                                          | logo da SEIVE sem autorização registrada               |
+| 8   | SELOS_DE_CONFIANCA      | Detecção e atuação automáticas · Acionamento manual disponível · Garantia de 12 meses                          | briefing                                               |
+| 9   | ENDERECO                | Belo Horizonte/MG                                                                                              | site do cliente — endereço completo pendente           |
+| 10  | URL_FINAL + PRIVACIDADE | `https://lp-seive-supressao-de-incendio.vercel.app/`; sem política de privacidade                              | Vercel                                                 |
+| 11  | SHORTCODES              | `[atendimento_chat id="default"]` · `[atendimento_form id="default-form"]`                                     | default do padrão                                      |
+| 12  | WHATSAPP                | 5531995538843 ("Orçamento por WhatsApp" do site da Safe Mine)                                                  | site do cliente; o briefing trazia os números da SEIVE |
+| 13  | STACK + PUBLICACAO      | Astro, `main` → `wp-build`; preview na Vercel                                                                  | default do padrão                                      |
+| 14  | TOKENS_DE_COR + FONTE   | azul #163b99 (navy #102c73), verde #7ba249 escurecido para #4d7f22; Manrope                                    | CSS do site do cliente                                 |
+| 15  | CAMPANHA                | `supressão de incêndio SEIVE`                                                                                  | briefing de campanha                                   |
 
 ## Assets
 
@@ -115,38 +110,40 @@ Derivada em: 29/10/2026 · comando aplicado: `npm run compose -- linhas processo
 | Logo           | `src/assets/LOGO.png`   | 240×200, fundo transparente | entregue — logo do site da Safe Mine |
 | Banner do hero | `src/assets/heroBg.png` | 1981×900, brief 4.1.3       | **pendente**                         |
 
-| Asset                        | Arquivo esperado                           | Especificação                 | Status                                                                                                               |
-| ---------------------------- | ------------------------------------------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Supressão para máquinas      | `src/assets/linhas/linha-1.png`            | PNG 800×600 recortado         | entregue — reservatório da apresentação SEIVE                                                                        |
-| Alarme e detecção fixos      | `src/assets/linhas/linha-2.png`            | PNG 800×600 recortado         | **pendente**                                                                                                         |
-| Geradores e estacionários    | `src/assets/linhas/linha-3.png`            | PNG 800×600 recortado         | entregue — reservatório do site da SEIVE                                                                             |
-| Peças genuínas (card escuro) | `src/assets/linhas/marcas.png`             | 1280×800                      | entregue — família de reservatórios da apresentação                                                                  |
-| Segmentos 1–8                | `src/assets/segmentos/segmento-{1..8}.png` | 1200×900 (4:3)                | entregues — 6 da apresentação SEIVE, gerador do site da Safe Mine, escavadeira do site da SEIVE; 4 abaixo de 1200 px |
-| Cenário dos diferenciais     | `src/assets/diferenciais/cenario.jpg`      | 1600×900                      | entregue — foto do acionador do site da Safe Mine (1280×720)                                                         |
-| Pessoa dos diferenciais      | `src/assets/diferenciais/pessoa.png`       | 1220×1000, fundo transparente | **pendente**                                                                                                         |
+| Asset                        | Arquivo esperado                             | Especificação                 | Status                                                                 |
+| ---------------------------- | -------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------- |
+| Reservatório                 | `src/assets/linhas/linha-1.png`              | PNG 800×600 recortado         | entregue — apresentação SEIVE                                          |
+| Painel de monitoramento      | `src/assets/linhas/linha-2.png`              | PNG 800×600 recortado         | entregue — apresentação SEIVE (original 328×219)                       |
+| Acionador                    | `src/assets/linhas/linha-3.png`              | PNG 800×600 recortado         | entregue — apresentação SEIVE                                          |
+| Peças genuínas (card escuro) | `src/assets/linhas/marcas.png`               | 1280×800                      | entregue — família de reservatórios da apresentação                    |
+| Aplicações 1–4               | `src/assets/aplicacoes/aplicacao-{1..4}.png` | 1200×900 (4:3)                | entregues — apresentação SEIVE e site da SEIVE; a florestal tem 899 px |
+| Cenário dos diferenciais     | `src/assets/diferenciais/cenario.jpg`        | 1600×900                      | entregue — foto do acionador do site da Safe Mine (1280×720)           |
+| Pessoa dos diferenciais      | `src/assets/diferenciais/pessoa.png`         | 1220×1000, fundo transparente | **pendente**                                                           |
 
-Direito de uso das fotos de setor (máquinas de fabricantes na apresentação da SEIVE) a confirmar com o cliente.
+Direito de uso das fotos de máquinas da apresentação da SEIVE a confirmar.
 
 ## Conflitos com o padrão
 
-| O que o material pedia                               | Regra do padrão                     | O que entrou no lugar                                                                    |
-| ---------------------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------- |
-| Material técnico do fabricante numa LP do revendedor | não inventar fato                   | Safe Mine como fornecedora; fatos técnicos atribuídos à SEIVE                            |
-| Números divergentes nas fontes da SEIVE              | número sem fonte não entra          | só "mais de 6.000 sistemas", segundo a fabricante                                        |
-| ABNT PE-223 no texto × PE-289 no selo                | não inventar fato                   | "certificado pela ABNT", sem número do programa                                          |
-| Logos de clientes da SEIVE                           | clientes têm de ser do anunciante   | bloco de clientes fora                                                                   |
-| Superlativos do site da SEIVE                        | claim sem comprovação não vai ao ar | nenhum; termos em `campaign.forbidden`                                                   |
-| Verde da Safe Mine nos botões                        | botão com texto branco exige 4,5:1  | verde escurecido (#4d7f22) como cor de ação                                              |
-| Title no formato padrão com 83 caracteres            | title ≤ 70 caracteres               | `conteudo.title` da ficha: "Sistema de supressão de incêndio para máquinas \| Safe Mine" |
+| O que o material pedia                                 | Regra do padrão                                          | O que entrou no lugar                                                              |
+| ------------------------------------------------------ | -------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| SEIVE como marca no núcleo do briefing                 | a LP é do anunciante                                     | Safe Mine na marca, rodapé e WhatsApp; SEIVE como fabricante                       |
+| Certificação ABNT, NFPA, UL, ISO 9001 e patente        | o briefing pede confirmar certificados antes de publicar | fora da página até a confirmação                                                   |
+| Área "Brasil e América do Sul"                         | o briefing pede confirmar a cobertura                    | nenhuma área declarada                                                             |
+| Linha "Sistema fixo de alarme e detecção" da Safe Mine | o que a campanha negativa não é assunto da página        | oferta só no Kit de Incêndio SEIVE                                                 |
+| Logos de clientes da SEIVE                             | clientes têm de ser do anunciante, com autorização       | bloco de clientes fora                                                             |
+| Verde da Safe Mine nos botões                          | botão com texto branco exige 4,5:1                       | verde escurecido (#4d7f22)                                                         |
+| CTA e formulário próprios                              | vocabulário de CTA e shortcode do plugin                 | CTAs do padrão; os 6 campos viraram o painel de dados para cotação                 |
+| Title no formato padrão com mais de 80 caracteres      | title ≤ 70 caracteres                                    | `conteudo.title`: "Supressão de incêndio SEIVE para máquinas pesadas \| Safe Mine" |
 
 ## Dados não aplicados
 
-WhatsApp secundário (31) 99710-0350; dados de contato da SEIVE (telefones, e-mails, CNPJ, endereço em Contagem/MG); linhas SEIVE fora do portfólio da Safe Mine (náutico LSI, SEIVE LUB); demais produtos da Safe Mine; depoimentos do site da SEIVE; texto institucional da Safe Mine (missão, visão, valores).
+LSI Náutico e SEIVE LUB; WhatsApp secundário (31) 99710-0350; contatos da SEIVE (telefones, e-mails, CNPJ, endereço); números da SEIVE (6.000 sistemas, 5.000 equipamentos salvos, R$ 6 bi preservados), que só entram com o bloco de clientes; depoimentos do site da SEIVE; demais produtos da Safe Mine; texto institucional.
 
 ## Desvios técnicos da execução
 
-- `src/data/sections/processo.ts`: a lista de etapas é anotada como `ProcessStep[]` fora do `as const`. Sem prazo em nenhuma etapa (regra da seção), o exemplo da biblioteca não compila — o tipo literal perde a propriedade opcional `when`. Correção a levar para a biblioteca.
-- `npm run screens` falha nesta pasta: o script monta o comando com `shell: true` e o caminho tem espaços. As capturas foram feitas com os mesmos parâmetros (porta 4873, Playwright 1.58.2, `?screens=1` e `?grid=1`), com caminho relativo.
+- `npm run screens` falha nesta pasta: o script monta o comando com `shell: true` e o caminho tem espaços. As capturas foram feitas com os mesmos parâmetros (porta 4873, Playwright 1.58.2, `?screens=1` e `?grid=1`), com caminho relativo e 5 s de espera.
+- Correção a levar para a biblioteca: em `processo`, quando nenhuma etapa tem prazo (a regra da seção manda omitir), o `as const` do exemplo faz o componente não compilar.
+- Véus do hero e brilho dos botões têm navy/laranja fixos em rgba no código da estrutura e da biblioteca, fora dos tokens.
 
 ## Estado da entrega
 

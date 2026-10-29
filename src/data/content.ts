@@ -47,17 +47,17 @@ export const header = {
 /* -------------------------------------------------------------------- hero */
 
 export const hero = {
-  eyebrow: 'Proteção contra incêndio',
-  title: 'Sistema de supressão de incêndio para máquinas e equipamentos',
-  text: 'Sistemas SEIVE com detecção e atuação automáticas para máquinas de mineração, agrícolas, florestais, portuárias e geradores, com atendimento consultivo.',
+  eyebrow: 'Proteção de máquinas',
+  title: 'Sistemas de supressão de incêndio SEIVE para máquinas pesadas',
+  text: 'Proteção automatizada para equipamentos móveis, máquinas industriais e operações de mineração, com atendimento consultivo da Safe Mine.',
   banner: {
     src: heroBg,
-    alt: 'Máquina pesada com sistema supressor SEIVE instalado',
+    alt: 'Equipamento pesado com o kit de incêndio SEIVE instalado',
   },
   points: [
-    { icon: 'shield', line1: 'Sistema SEIVE', line2: 'certificado ABNT' },
-    { icon: 'zap', line1: 'Atuação automática', line2: 'em até 15 s' },
-    { icon: 'users', line1: 'Atendimento', line2: 'consultivo' },
+    { icon: 'shield', line1: 'Sistemas SEIVE', line2: 'para máquinas pesadas' },
+    { icon: 'zap', line1: 'Proteção automatizada', line2: 'para equipamentos móveis' },
+    { icon: 'mountain', line1: 'Solução para', line2: 'mineração' },
   ],
 } as const satisfies {
   eyebrow: string
@@ -72,11 +72,11 @@ export const hero = {
 export const quote = {
   eyebrow: 'Solicite sua cotação',
   title: 'Fale com quem entende de supressão de incêndio.',
-  text: 'Nossa equipe indica a solução SEIVE adequada para a sua máquina e a sua operação. Preencha o formulário ou fale direto conosco pelo WhatsApp.',
+  text: 'Solicite uma avaliação comercial para proteção contra incêndio em sua operação. Preencha o formulário ou fale direto conosco pelo WhatsApp.',
   trust: [
+    { icon: 'zap', label: 'Detecção e atuação automáticas' },
+    { icon: 'power', label: 'Acionamento manual disponível' },
     { icon: 'shield', label: 'Garantia de 12 meses' },
-    { icon: 'wrench', label: 'Suporte técnico especializado' },
-    { icon: 'pin', label: 'Atendimento em todo o Brasil' },
   ],
   /** Nota de LGPD exibida abaixo do formulário. */
   lgpd: 'Seus dados serão usados apenas para responder à sua solicitação de cotação, conforme a LGPD.',

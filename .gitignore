@@ -35,3 +35,6 @@ docs/lighthouse/
 # O que a LP precisa, organizado e com as decisões, fica em docs/BRIEFING.md.
 docs/briefing-cliente/*
 !docs/briefing-cliente/README.md
+
+.vercel
+.env*

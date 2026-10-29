@@ -4,8 +4,8 @@
  * 3 ou 4 cards, exatamente um deles escuro — normalmente o card de marcas, que
  * fecha o grid com peso visual. Cada linha tem 3 features de 2–4 palavras.
  *
- * `linha-2.png` (sistema fixo de alarme) segue como placeholder: a ficha declara o
- * slot `linhas` em `assets.pendentes`.
+ * Nesta LP os cards são os componentes do Kit de Incêndio SEIVE, e o card escuro é
+ * o pós-venda.
  */
 import type { Photo } from '@data/types'
 
@@ -26,38 +26,35 @@ export interface ProductLine {
 }
 
 export const productLines = {
-  eyebrow: 'Soluções de proteção',
-  title: 'Supressão de incêndio para cada operação',
-  text: 'Sistemas SEIVE e soluções de detecção fornecidos pela Safe Mine para máquinas, ambientes críticos e equipamentos estacionários.',
+  eyebrow: 'Kit de Incêndio SEIVE',
+  title: 'O que compõe o sistema',
+  text: 'O Kit de Incêndio SEIVE reúne reservatório, detecção e acionadores para proteger máquinas pesadas e equipamentos móveis.',
   items: [
     {
-      id: 'maquinas',
-      tag: 'Máquinas',
-      title: 'Supressão para máquinas',
-      description:
-        'Sistema SEIVE com detecção e atuação automáticas para máquinas pesadas e autopropelidas.',
+      id: 'reservatorio',
+      tag: 'Supressão',
+      title: 'Reservatório de pó químico',
+      description: 'Reservatório de 15 kg com pó químico ABC 90%, pressurizado por nitrogênio.',
       photo: { src: linha1, alt: 'Reservatório de pó químico SEIVE' },
-      features: ['Atuação em até 15 s', 'Botoeiras manuais', 'Painel de monitoramento'],
+      features: ['Pó químico ABC 90%', 'Pressão de trabalho 21 kg', 'Cilindro de nitrogênio 320 g'],
       dark: false,
     },
     {
-      id: 'alarme',
-      tag: 'Ambientes',
-      title: 'Alarme e detecção fixos',
-      description:
-        'Monitoramento permanente de salas elétricas, usinas e áreas técnicas, com alerta rápido.',
-      photo: { src: linha2, alt: 'Central de alarme e detecção de incêndio' },
-      features: ['Detecção e alarme', 'Monitoramento contínuo', 'Aplicação sob medida'],
+      id: 'monitoramento',
+      tag: 'Detecção',
+      title: 'Painel de monitoramento',
+      description: 'Painel 12/24 VCC com LEDs de status, que registra os últimos 2.000 eventos.',
+      photo: { src: linha2, alt: 'Painel de monitoramento SEIVE' },
+      features: ['Bivolt 12/24 VCC', 'LEDs de status', 'Registro de eventos'],
       dark: false,
     },
     {
-      id: 'estacionarios',
-      tag: 'Estacionários',
-      title: 'Geradores e estacionários',
-      description:
-        'Projeto dimensionado para geradores e equipamentos fixos que sustentam a operação.',
-      photo: { src: linha3, alt: 'Reservatório supressor SEIVE vermelho' },
-      features: ['Projeto dimensionado', 'Grupos geradores', 'Equipamentos estacionários'],
+      id: 'acionadores',
+      tag: 'Acionamento',
+      title: 'Acionadores automático e manual',
+      description: 'Acionador automático na cabine e acionador manual externo de alumínio.',
+      photo: { src: linha3, alt: 'Acionador SEIVE vermelho' },
+      features: ['Acionamento automático', 'Acionador manual externo', 'Cilindro de ativação N2'],
       dark: false,
     },
     {

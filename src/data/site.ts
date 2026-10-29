@@ -8,9 +8,9 @@ export const site = {
   /** Nome curto usado em frases como "Por que a …" (entrada 2). */
   brandShort: 'Safe Mine',
   /** Produto principal, no plural (entrada 3). Vai na tagline do header e no H1. */
-  product: 'Sistemas de supressão de incêndio',
+  product: 'Sistemas de supressão de incêndio SEIVE',
   /** Contexto de uso (entrada 4). Completa o H1 e o title. */
-  context: 'máquinas e equipamentos',
+  context: 'máquinas pesadas',
   /** URL absoluta da página no ar (entrada 10). Usada em canonical e og:url. */
   url: 'https://lp-seive-supressao-de-incendio.vercel.app/',
   /** Endereço completo com CEP (entrada 9). Footer e JSON-LD. */
@@ -36,13 +36,13 @@ export const shortcodes = {
 
 /**
  * Título da aba. A ficha define `conteudo.title`: o formato padrão
- * ("{Produto} para {contexto} | {Marca}") daria 83 caracteres com "Safe Mine Soluções".
+ * ("{Produto} para {contexto} | {Marca}") passaria de 80 caracteres com "Safe Mine Soluções".
  */
-export const title = 'Sistema de supressão de incêndio para máquinas | Safe Mine'
+export const title = 'Supressão de incêndio SEIVE para máquinas pesadas | Safe Mine'
 
 /** Meta description (≤ 160 caracteres). Ajuste o texto, mantendo marcas e o apoio técnico. */
 export const description =
-  'Sistema de supressão de incêndio SEIVE para máquinas e equipamentos, com atendimento consultivo da Safe Mine e suporte técnico em todo o Brasil.'
+  'Supressão de incêndio SEIVE para máquinas pesadas e equipamentos móveis, com detecção e atuação automáticas e atendimento consultivo da Safe Mine.'
 
 /**
  * Campanha que leva tráfego para esta LP (entrada 15). Quem clica digitou a
@@ -54,18 +54,33 @@ export const campaign = {
    * estiver no H1 e no title — aceita maiúscula, acento, plural e outra ordem.
    * `null` quando a LP não tem campanha definida; vazio é entrada não preenchida.
    */
-  mainKeyword: 'sistema de supressão de incêndio',
+  mainKeyword: 'supressão de incêndio SEIVE',
   /**
    * Negativas **de oferta** da campanha — o que a empresa não vende. O `check:lp`
    * avisa quando o texto da página usa uma delas. As de intenção (emprego, curso)
    * ficam só no BRIEFING.md.
    */
-  negatives: ['cozinha', 'coifa', 'sprinkler', 'hidrante'],
+  negatives: [
+    'extintor doméstico',
+    'extintor automotivo avulso',
+    'mangueira de incêndio',
+    'alarme residencial',
+    'detector de fumaça casa',
+    'central de alarme',
+    'detecção para data center',
+    'sistema de lubrificação',
+  ],
   /**
    * Claims que o briefing proíbe ("autorizado", "distribuidor", "até 42%"), em todas
    * as formas em que podem aparecer. O `check:lp` falha se a página usar qualquer um.
    */
   forbidden: [
+    'risco zero',
+    'elimina o risco',
+    'elimina riscos',
+    'evita perdas',
+    'evita prejuízos',
+    '100% seguro',
     'autorizado',
     'autorizada',
     'distribuidor oficial',

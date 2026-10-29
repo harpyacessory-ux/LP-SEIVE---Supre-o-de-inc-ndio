@@ -10,13 +10,12 @@
       "linhas"
     ],
     "apoio": [
-      "processo"
+      "identificar"
     ],
     "prova": [
-      "segmentos"
+      "aplicacoes"
     ],
     "autoridade": [
-      "perguntas",
       "diferenciais"
     ]
   },
@@ -92,13 +91,13 @@
       ]
     },
     {
-      "slug": "processo",
-      "id": "processo",
-      "title": "Como funciona (etapas)",
+      "slug": "identificar",
+      "id": "identificar",
+      "title": "Painel de apoio à identificação",
       "phase": "apoio",
-      "component": "ProcessSteps.astro",
-      "data": "processo.ts",
-      "dataExport": "process",
+      "component": "SupportPanel.astro",
+      "data": "identificar.ts",
+      "dataExport": "supportPanel",
       "carriesNavy": true,
       "tone": "light",
       "rhythm": "panel-lead",
@@ -109,124 +108,75 @@
       "rhythms": [
         "panel-lead"
       ],
-      "exampleHash": "d3aa70a611368bc0",
+      "exampleHash": "dfa6bcf7c0258bb1",
       "ctas": [
-        "processo-cta"
+        "identificar-cta"
       ],
       "contract": {
-        "itemsPath": "steps",
-        "itemsMin": 4,
+        "itemsPath": "items",
+        "itemsMin": 6,
         "itemsMax": 6,
         "requiredItemFields": [
-          "id",
           "icon",
-          "title",
-          "description"
+          "label",
+          "hint"
         ],
         "maxLength": {
           "text": 170,
-          "microcopy": 48,
-          "item.description": 90
+          "microcopy": 48
         }
       },
       "assets": []
     },
     {
-      "slug": "segmentos",
-      "id": "segmentos",
-      "title": "Segmentos atendidos",
+      "slug": "aplicacoes",
+      "id": "aplicacoes",
+      "title": "Aplicações",
       "phase": "prova",
-      "component": "SegmentsShowcase.astro",
-      "data": "segmentos.ts",
-      "dataExport": "segments",
+      "component": "ApplicationsGallery.astro",
+      "data": "aplicacoes.ts",
+      "dataExport": "applications",
       "carriesNavy": false,
-      "tone": "light",
-      "rhythm": "tight",
+      "tone": "gray",
+      "rhythm": "centered-lead",
       "tones": [
         "light",
         "gray"
       ],
       "rhythms": [
+        "centered-lead",
         "even",
-        "tight",
         "flow"
       ],
-      "exampleHash": "9281198d60ed8cda",
+      "exampleHash": "61d1254bd3fc3c58",
       "ctas": [
-        "segmentos-{item.id}"
+        "aplicacoes-{item.id}"
       ],
       "contract": {
         "itemsPath": "items",
-        "itemsMin": 8,
-        "itemsMax": 8,
+        "itemsMin": 4,
+        "itemsMax": 4,
         "requiredItemFields": [
           "id",
-          "icon",
           "label",
           "description",
-          "bullets"
+          "photo"
         ],
-        "itemArrays": {
-          "bullets": 3
-        },
-        "lastItemId": "outras",
         "maxLength": {
-          "text": 170
+          "text": 170,
+          "item.description": 90
         }
       },
       "assets": [
         {
-          "dir": "segmentos",
-          "files": "8 fotos (opcionais)",
-          "spec": "JPG/PNG 1200×900 (4:3), planta do setor em operação",
+          "dir": "aplicacoes",
+          "files": "4 fotos",
+          "spec": "JPG/PNG 1200×900 (4:3), equipamento em operação",
           "width": 1200,
           "height": 900,
           "alpha": false
         }
       ]
-    },
-    {
-      "slug": "perguntas",
-      "id": "perguntas",
-      "title": "Perguntas frequentes",
-      "phase": "autoridade",
-      "component": "FaqAccordion.astro",
-      "data": "perguntas.ts",
-      "dataExport": "faq",
-      "carriesNavy": false,
-      "tone": "gray",
-      "rhythm": "even",
-      "tones": [
-        "light",
-        "gray"
-      ],
-      "rhythms": [
-        "even",
-        "tight",
-        "flow"
-      ],
-      "exampleHash": "fd04d78727fd1e35",
-      "ctas": [
-        "perguntas-cta"
-      ],
-      "contract": {
-        "itemsPath": "items",
-        "itemsMin": 4,
-        "itemsMax": 8,
-        "requiredItemFields": [
-          "id",
-          "question",
-          "answer"
-        ],
-        "maxLength": {
-          "text": 170,
-          "item.answer": 320
-        },
-        "endsWith": {
-          "item.question": "?"
-        }
-      },
-      "assets": []
     },
     {
       "slug": "diferenciais",

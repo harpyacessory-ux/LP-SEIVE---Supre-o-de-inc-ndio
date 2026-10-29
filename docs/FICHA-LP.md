@@ -2,14 +2,14 @@
 ficha: 1
 padrao: 2.8.0
 cliente: Safe Mine Soluções
-produto: Sistemas de supressão de incêndio SEIVE
+produto: Kit de Incêndio SEIVE
 data: 2026-10-29
 
 site:
   brand: Safe Mine Soluções
   brandShort: Safe Mine
-  product: Sistemas de supressão de incêndio
-  context: máquinas e equipamentos
+  product: Sistemas de supressão de incêndio SEIVE
+  context: máquinas pesadas
   url: https://lp-seive-supressao-de-incendio.vercel.app/
   address: Belo Horizonte/MG
   privacyUrl: ''
@@ -19,9 +19,23 @@ site:
     form: '[atendimento_form id="default-form"]'
 
 campanha:
-  mainKeyword: sistema de supressão de incêndio
-  negatives: [cozinha, coifa, sprinkler, hidrante]
+  mainKeyword: supressão de incêndio SEIVE
+  negatives:
+    - extintor doméstico
+    - extintor automotivo avulso
+    - mangueira de incêndio
+    - alarme residencial
+    - detector de fumaça casa
+    - central de alarme
+    - detecção para data center
+    - sistema de lubrificação
   forbidden:
+    - risco zero
+    - elimina o risco
+    - elimina riscos
+    - evita perdas
+    - evita prejuízos
+    - 100% seguro
     - autorizado
     - autorizada
     - distribuidor oficial
@@ -34,38 +48,28 @@ campanha:
   areaAtendida: null
   onde: null
   familias:
-    - nome: sistema-supressao
+    - nome: produto-categoria
       termos:
         - sistema de supressão de incêndio
-        - supressão de incêndio
-        - supressor de incêndio
-        - sistema supressor de incêndio
+        - supressão de incêndio SEIVE
       responde: linhas
-    - nome: maquinas
+    - nome: equipamento-aplicacao
       termos:
-        - supressão de incêndio em máquinas
-        - sistema de combate a incêndio em máquinas
-        - supressão de incêndio veicular
-        - sistema de supressão de incêndio para máquinas pesadas
-      responde: linhas
-    - nome: alarme-deteccao
+        - supressão para máquinas pesadas
+        - supressão para equipamentos móveis
+        - proteção contra incêndio máquinas industriais
+        - sistema automático combate incêndio máquinas
+      responde: aplicacoes
+    - nome: setor
       termos:
-        - sistema de alarme e detecção de incêndio
-        - detecção de incêndio para sala elétrica
-      responde: linhas
-    - nome: setores
+        - sistema de supressão de incêndio mineração
+      responde: aplicacoes
+    - nome: transacional
       termos:
-        - sistema de supressão de incêndio para mineração
-        - supressor de incêndio colheitadeira
-        - combate a incêndio em máquinas agrícolas
-      responde: segmentos
-    - nome: instalacao-manutencao
-      termos:
-        - instalação de sistema de supressão de incêndio
-        - manutenção de sistema de supressão de incêndio
-      responde: processo
+        - cotação sistema supressão incêndio
+      responde: identificar
 
-publico: [Manutenção de frota, Segurança do trabalho, Engenharia, Compras]
+publico: [Gestores de manutenção, Gestores de segurança, Gestores de frotas]
 
 marcas:
   usarLogos: false
@@ -81,73 +85,73 @@ tokens:
     verde-marca: '#7ba249'
 
 conteudo:
-  title: Sistema de supressão de incêndio para máquinas | Safe Mine
-  description: Sistema de supressão de incêndio SEIVE para máquinas e equipamentos, com atendimento consultivo da Safe Mine e suporte técnico em todo o Brasil.
+  title: Supressão de incêndio SEIVE para máquinas pesadas | Safe Mine
+  description: Supressão de incêndio SEIVE para máquinas pesadas e equipamentos móveis, com detecção e atuação automáticas e atendimento consultivo da Safe Mine.
   hero:
-    eyebrow: Proteção contra incêndio
-    title: Sistema de supressão de incêndio para máquinas e equipamentos
-    text: Sistemas SEIVE com detecção e atuação automáticas para máquinas de mineração, agrícolas, florestais, portuárias e geradores, com atendimento consultivo.
+    eyebrow: Proteção de máquinas
+    title: Sistemas de supressão de incêndio SEIVE para máquinas pesadas
+    text: Proteção automatizada para equipamentos móveis, máquinas industriais e operações de mineração, com atendimento consultivo da Safe Mine.
     points:
       - icon: shield
-        line1: Sistema SEIVE
-        line2: certificado ABNT
+        line1: Sistemas SEIVE
+        line2: para máquinas pesadas
       - icon: zap
-        line1: Atuação automática
-        line2: em até 15 s
-      - icon: users
-        line1: Atendimento
-        line2: consultivo
+        line1: Proteção automatizada
+        line2: para equipamentos móveis
+      - icon: mountain
+        line1: Solução para
+        line2: mineração
   quote:
     eyebrow: Solicite sua cotação
     title: Fale com quem entende de supressão de incêndio.
-    text: Nossa equipe indica a solução SEIVE adequada para a sua máquina e a sua operação. Preencha o formulário ou fale direto conosco pelo WhatsApp.
+    text: Solicite uma avaliação comercial para proteção contra incêndio em sua operação. Preencha o formulário ou fale direto conosco pelo WhatsApp.
     trust:
+      - icon: zap
+        label: Detecção e atuação automáticas
+      - icon: power
+        label: Acionamento manual disponível
       - icon: shield
         label: Garantia de 12 meses
-      - icon: wrench
-        label: Suporte técnico especializado
-      - icon: pin
-        label: Atendimento em todo o Brasil
     lgpd: Seus dados serão usados apenas para responder à sua solicitação de cotação, conforme a LGPD.
 
 blocos:
   linhas:
     veredicto: completo
-    responde: [sistema-supressao, maquinas, alarme-deteccao]
-    papeis: [Engenharia, Compras]
-    eyebrow: Soluções de proteção
-    title: Supressão de incêndio para cada operação
-    text: Sistemas SEIVE e soluções de detecção fornecidos pela Safe Mine para máquinas, ambientes críticos e equipamentos estacionários.
+    responde: [produto-categoria]
+    papeis: [Gestores de manutenção, Gestores de frotas]
+    eyebrow: Kit de Incêndio SEIVE
+    title: O que compõe o sistema
+    text: O Kit de Incêndio SEIVE reúne reservatório, detecção e acionadores para proteger máquinas pesadas e equipamentos móveis.
     items:
-      - id: maquinas
-        tag: Máquinas
-        title: Supressão para máquinas
-        description: Sistema SEIVE com detecção e atuação automáticas para máquinas pesadas e autopropelidas.
+      - id: reservatorio
+        tag: Supressão
+        title: Reservatório de pó químico
+        description: Reservatório de 15 kg com pó químico ABC 90%, pressurizado por nitrogênio.
         features:
-          - Atuação em até 15 s
-          - Botoeiras manuais
-          - Painel de monitoramento
+          - Pó químico ABC 90%
+          - Pressão de trabalho 21 kg
+          - Cilindro de nitrogênio 320 g
         photo: Reservatório de pó químico SEIVE
         dark: false
-      - id: alarme
-        tag: Ambientes
-        title: Alarme e detecção fixos
-        description: Monitoramento permanente de salas elétricas, usinas e áreas técnicas, com alerta rápido.
+      - id: monitoramento
+        tag: Detecção
+        title: Painel de monitoramento
+        description: Painel 12/24 VCC com LEDs de status, que registra os últimos 2.000 eventos.
         features:
-          - Detecção e alarme
-          - Monitoramento contínuo
-          - Aplicação sob medida
-        photo: Central de alarme e detecção de incêndio
+          - Bivolt 12/24 VCC
+          - LEDs de status
+          - Registro de eventos
+        photo: Painel de monitoramento SEIVE
         dark: false
-      - id: estacionarios
-        tag: Estacionários
-        title: Geradores e estacionários
-        description: Projeto dimensionado para geradores e equipamentos fixos que sustentam a operação.
+      - id: acionadores
+        tag: Acionamento
+        title: Acionadores automático e manual
+        description: Acionador automático na cabine e acionador manual externo de alumínio.
         features:
-          - Projeto dimensionado
-          - Grupos geradores
-          - Equipamentos estacionários
-        photo: Reservatório supressor SEIVE vermelho
+          - Acionamento automático
+          - Acionador manual externo
+          - Cilindro de ativação N2
+        photo: Acionador SEIVE vermelho
         dark: false
       - id: pecas
         tag: Pós-venda
@@ -160,14 +164,43 @@ blocos:
         photo: Família de reservatórios supressores SEIVE
         dark: true
 
-  processo:
+  identificar:
     veredicto: completo
-    responde: [instalacao-manutencao]
-    papeis: [Manutenção de frota, Engenharia]
+    responde: [transacional]
+    papeis: [Gestores de manutenção, Gestores de frotas]
+    eyebrow: Dados para cotação
+    title: Quer cotar a proteção da sua máquina?
+    microcopy: Avaliação comercial da sua operação
+    text: Não precisa ter tudo em mãos. Envie o que tiver e a equipe indica a solução SEIVE adequada para a sua operação.
+    items:
+      - icon: truck
+        label: Tipo de máquina
+        hint: equipamento a proteger
+      - icon: tag
+        label: Marca e modelo
+        hint: identificação do ativo
+      - icon: hash
+        label: Quantidade
+        hint: equipamentos a proteger
+      - icon: factory
+        label: Segmento
+        hint: setor da operação
+      - icon: pin
+        label: Cidade/UF
+        hint: local da operação
+      - icon: file
+        label: Descrição
+        hint: condições de aplicação
+
+  processo:
+    veredicto: quase
+    falta: confirmar a sequência real, o responsável por cada etapa e os marcos públicos
+    responde: [transacional]
+    papeis: [Gestores de manutenção]
     eyebrow: Como funciona
     title: Da análise da máquina ao pós-venda
-    microcopy: Atendimento consultivo em todo o Brasil
-    text: Atendimento consultivo da Safe Mine do primeiro contato ao pós-venda, com sistema fabricado e certificado pela SEIVE.
+    microcopy: Atendimento consultivo da Safe Mine
+    text: Atendimento consultivo da Safe Mine do primeiro contato ao pós-venda, com sistema fabricado pela SEIVE.
     steps:
       - id: analise
         icon: search
@@ -180,7 +213,7 @@ blocos:
       - id: fabricacao
         icon: factory
         title: Fabricação
-        description: Sistema produzido pela SEIVE em Contagem-MG, sob gestão da qualidade ISO 9001.
+        description: Sistema produzido pela SEIVE em Contagem-MG, a partir do dimensionamento definido.
       - id: instalacao
         icon: wrench
         title: Instalação
@@ -190,11 +223,36 @@ blocos:
         title: Suporte
         description: Suporte técnico especializado e garantia de 12 meses contra defeitos de fabricação.
 
+  aplicacoes:
+    veredicto: completo
+    responde: [equipamento-aplicacao, setor]
+    papeis: [Gestores de frotas, Gestores de segurança]
+    eyebrow: Aplicações
+    title: Proteção para máquinas pesadas e equipamentos móveis
+    text: Sistema dimensionado para cada tipo de máquina, em operações de mineração, construção, florestais e agrícolas.
+    items:
+      - id: mineracao
+        label: Máquinas de mineração
+        description: Caminhões fora de estrada e escavadeiras em ambiente abrasivo e de alto custo de parada.
+        photo: Caminhão fora de estrada em mina
+      - id: construcao
+        label: Máquinas de construção
+        description: Escavadeiras, carregadeiras e equipamentos móveis de obras e infraestrutura.
+        photo: Escavadeira com sistema supressor SEIVE
+      - id: florestal
+        label: Máquinas florestais
+        description: Harvesters e forwarders cercados de galhos e resíduos secos na colheita de madeira.
+        photo: Máquina florestal carregando toras
+      - id: agricola
+        label: Máquinas agrícolas
+        description: Colheitadeiras e tratores em jornadas longas, com palha e poeira junto ao motor.
+        photo: Colheitadeira em lavoura de grãos
+
   segmentos:
     veredicto: completo
-    responde: [setores]
-    papeis: [Segurança do trabalho, Manutenção de frota]
-    eyebrow: Principais aplicações
+    responde: [setor]
+    papeis: [Gestores de segurança]
+    eyebrow: Segmentos atendidos
     title: Proteção para cada setor da operação
     text: O sistema é dimensionado conforme o equipamento e a aplicação, em máquinas autopropelidas, móveis ou estacionárias.
     items:
@@ -207,15 +265,15 @@ blocos:
           - Escavadeiras e carregadeiras
           - Perfuratrizes
         photo: Caminhão fora de estrada em mina
-      - id: agronegocio
-        icon: grid
-        label: Agronegócio
-        description: Máquinas que plantam e colhem em jornadas longas, com palha e poeira junto ao motor, onde uma parada custa a safra.
+      - id: construcao
+        icon: truck
+        label: Construção
+        description: Escavadeiras, carregadeiras e outros autopropelidos de obras e infraestrutura, com projeto conforme os pontos de risco.
         bullets:
-          - Colheitadeiras de grãos
-          - Tratores
-          - Pulverizadores autopropelidos
-        photo: Colheitadeira em lavoura de grãos
+          - Escavadeiras
+          - Pás carregadeiras
+          - Máquinas de obras
+        photo: Escavadeira com sistema supressor SEIVE
       - id: florestal
         icon: leaf
         label: Florestal
@@ -225,15 +283,15 @@ blocos:
           - Forwarders
           - Escavadeiras florestais
         photo: Máquina florestal carregando toras
-      - id: portuario
-        icon: box
-        label: Portuário
-        description: Movimentação de contêineres e cargas em turnos contínuos, onde um incêndio para o pátio e atrasa a operação.
+      - id: agronegocio
+        icon: grid
+        label: Agronegócio
+        description: Máquinas que plantam e colhem em jornadas longas, com palha e poeira junto ao motor, onde uma parada custa a safra.
         bullets:
-          - Reach stackers
-          - Empilhadeiras de contêineres
-          - Guindastes móveis
-        photo: Reach stacker movimentando contêiner
+          - Colheitadeiras de grãos
+          - Tratores
+          - Pulverizadores autopropelidos
+        photo: Colheitadeira em lavoura de grãos
       - id: industria
         icon: factory
         label: Indústria
@@ -243,45 +301,42 @@ blocos:
           - Instalações industriais
           - Áreas técnicas
         photo: Equipamento de pátio em operação
-      - id: energia
-        icon: bolt
-        label: Geradores e energia
-        description: Geradores, usinas e salas elétricas que sustentam a operação pedem detecção rápida e proteção sob medida.
+      - id: sucroenergetico
+        icon: droplet
+        label: Sucroenergético
+        description: Colheita mecanizada de cana em operação contínua, com palha e bagaço secos perto das partes quentes da máquina.
         bullets:
-          - Grupos geradores
-          - Usinas de energia
-          - Salas elétricas
-        photo: Gerador de energia em subestação
-      - id: moveis
-        icon: truck
-        label: Equipamentos móveis
-        description: Escavadeiras, carregadeiras e outros autopropelidos de obras e infraestrutura, com projeto conforme os pontos de risco.
+          - Colhedoras de cana
+          - Tratores e transbordos
+          - Caminhões canavieiros
+        photo: Colhedora de cana no canavial
+      - id: portuario
+        icon: box
+        label: Portuário
+        description: Movimentação de contêineres e cargas em turnos contínuos, onde um incêndio para o pátio e atrasa a operação.
         bullets:
-          - Escavadeiras
-          - Pás carregadeiras
-          - Máquinas de obras
-        photo: Escavadeira com sistema supressor SEIVE
+          - Reach stackers
+          - Empilhadeiras de contêineres
+          - Guindastes móveis
+        photo: Reach stacker movimentando contêiner
       - id: outras
         icon: dots
         label: Outras aplicações
-        description: Avaliamos outras máquinas com risco de incêndio, como colhedoras de cana e algodão e frotas de locação.
+        description: Avaliamos outras máquinas com risco de incêndio, como colhedoras de algodão, equipamentos estacionários e frotas de locação.
         bullets:
-          - Colhedoras de cana
           - Colhedoras de algodão
+          - Equipamentos estacionários
           - Frotas de locação
         photo: Colhedora de algodão em lavoura
 
   perguntas:
     veredicto: completo
     responde: []
-    papeis: [Compras, Segurança do trabalho, Manutenção de frota]
+    papeis: [Gestores de manutenção, Gestores de segurança]
     eyebrow: Perguntas frequentes
     title: O que perguntam antes de contratar
     text: As dúvidas mais comuns sobre o sistema e o atendimento. Não encontrou a sua? Fale com a nossa equipe.
     items:
-      - id: abrangencia
-        question: A Safe Mine atende empresas de outras regiões?
-        answer: Sim. A atuação abrange todo o território nacional, considerando as características e as necessidades de cada projeto.
       - id: informacoes
         question: Quais informações devo enviar para solicitar um atendimento?
         answer: Conte sobre a operação, o equipamento e a aplicação. Segmento, localização, características da máquina e requisitos técnicos ajudam a equipe a indicar a solução adequada.
@@ -297,37 +352,33 @@ blocos:
 
   diferenciais:
     veredicto: completo
-    responde: []
-    papeis: [Compras, Segurança do trabalho]
-    eyebrow: Por que a Safe Mine
-    titleLines: [Tecnologia SEIVE, atendimento Safe Mine.]
-    text: A Safe Mine conecta a sua operação ao sistema SEIVE, primeiro supressor certificado pela ABNT no Brasil e com mais de 6.000 instalações segundo a fabricante, do diagnóstico ao suporte técnico.
+    responde: [produto-categoria, equipamento-aplicacao]
+    papeis: [Gestores de segurança, Gestores de manutenção]
+    eyebrow: Diferenciais SEIVE
+    titleLines: [Proteção de ativos, com tecnologia SEIVE.]
+    text: A Safe Mine fornece o sistema SEIVE com atendimento consultivo — a solução é indicada conforme a máquina, a aplicação e o ambiente de cada operação.
     scene: Acionador SEIVE instalado em máquina
     person: Especialista da Safe Mine
     reasons:
-      - icon: users
-        title: Atendimento consultivo
-        description: Análise de cada operação para indicar a solução compatível.
+      - icon: zap
+        title: Detecção e atuação
+        description: Atuação automática conforme a configuração do sistema.
+      - icon: power
+        title: Acionamento manual
+        description: Possibilidade de intervenção manual por botoeiras.
+      - icon: cpu
+        title: Painel de monitoramento
+        description: Status do sistema e registro dos últimos 2.000 eventos.
       - icon: shield
-        title: Tecnologia certificada
-        description: Sistema SEIVE patenteado e certificado pela ABNT desde 2012.
-      - icon: check
-        title: Normas internacionais
-        description: Atende a requisitos da NFPA 17, NFPA 122 e UL 1254.
-      - icon: clock
-        title: Garantia estendida
-        description: Painel 24 meses, ampolas 10 anos e reservatórios 5 anos.
-      - icon: pin
-        title: Atuação nacional
-        description: Atendimento a operações em todo o território nacional.
+        title: Garantia de fábrica
+        description: 12 meses contra defeito de fabricação.
+      - icon: wrench
+        title: Suporte técnico
+        description: Canal técnico direto durante o período de garantia.
 
   clientes:
     veredicto: insuficiente
-    falta: as logos e os números da apresentação são clientes e resultados da SEIVE, não da Safe Mine; faltam 4 logos autorizadas e 3 números da própria Safe Mine
-
-  identificar:
-    veredicto: insuficiente
-    falta: o comercial não informou os 6 dados que pede para dimensionar um sistema
+    falta: as logos e os números da apresentação são clientes e resultados da SEIVE, não da Safe Mine, e não há autorização expressa das logos
 
   situacoes:
     veredicto: insuficiente
@@ -335,131 +386,121 @@ blocos:
 
   especificacoes:
     veredicto: insuficiente
-    falta: há especificação de um único kit (reservatório de 15 kg); faltam 4 modelos com atributos comparáveis
+    falta: há especificação de um único kit; faltam 4 a 10 modelos ou configurações comparáveis
 
   vitrine:
     veredicto: insuficiente
-    falta: são 2 sistemas de supressão no portfólio; a vitrine pede de 6 a 24 produtos
-
-  aplicacoes:
-    veredicto: insuficiente
-    falta: não há 4 aplicações distintas dos setores — as fotos disponíveis são as mesmas dos segmentos, que cobrem o reconhecimento com mais profundidade
+    falta: há um único kit; a vitrine pede de 6 a 24 produtos
 
   escopo:
     veredicto: nao-se-aplica
     falta: a oferta é um sistema de proteção, não consolidação de compras de itens diferentes
 
 assets:
-  pendentes: [heroBg, linhas, diferenciais]
+  pendentes: [heroBg, diferenciais]
 
 conflitos:
-  - pede: material técnico do fabricante (apresentação e site da SEIVE) numa LP do revendedor
-    regra: não inventar fato; claim de fabricação é do fabricante
-    entrou: a Safe Mine aparece como quem fornece, especifica e dá suporte; fabricação, certificação, normas e números são atribuídos à SEIVE
-  - pede: números divergentes entre site e apresentação da SEIVE (6.000 × 7.000 sistemas; R$ 6 bi × R$ 8 bi; 20 × 25 × 26 anos)
-    regra: número sem fonte identificável não entra
-    entrou: só "mais de 6.000 sistemas", que a apresentação 2026 e a página da Safe Mine trazem, atribuído à fabricante
-  - pede: certificação ABNT PE-223 no texto da apresentação, e PE-289 no selo da imagem
-    regra: não inventar fato
-    entrou: 'a página diz "certificado pela ABNT", sem o número do programa'
+  - pede: núcleo do briefing de campanha com a SEIVE como marca (endereço em Contagem/MG e WhatsApp da SEIVE)
+    regra: a LP é do anunciante; o cliente informado é a Safe Mine, revendedora do sistema SEIVE
+    entrou: Safe Mine na marca, no rodapé e no WhatsApp; SEIVE como fabricante, citada por extenso
+  - pede: certificação ABNT PE-223, normas NFPA e UL, ISO 9001 e patente
+    regra: o briefing de campanha pede confirmar certificados, vigência e escopo antes de publicar
+    entrou: nada disso na página até a confirmação; os itens ficam em "itens excedentes"
+  - pede: área atendida "Brasil e América do Sul" do material institucional
+    regra: o briefing de campanha pede confirmar a cobertura antes de usá-la em hero, selo ou cotação
+    entrou: nenhuma área declarada na página
+  - pede: linha "Sistema fixo de alarme e detecção" do site da Safe Mine
+    regra: o que a campanha negativa ("central de alarme", "detecção para data center") não é assunto da página
+    entrou: a oferta fica só no Kit de Incêndio SEIVE
   - pede: logos de clientes da SEIVE (Vale, Raízen, Suzano, Gerdau e outras)
     regra: logo de cliente exige autorização, e os clientes têm de ser do anunciante
     entrou: nada; o bloco de clientes ficou fora
-  - pede: superlativos do site da SEIVE ("a única do Brasil", "líder", "único líquido patenteado no mundo")
-    regra: claim sem comprovação não vai ao ar
-    entrou: nenhum superlativo; os termos foram registrados em campanha.forbidden
   - pede: verde da marca Safe Mine (#7ba249) nos botões
     regra: botão do padrão tem texto branco e exige contraste de 4,5:1
     entrou: o mesmo verde escurecido (#4d7f22) como cor de ação; o azul da marca no papel do navy
+  - pede: CTA e formulário próprios no briefing
+    regra: vocabulário de CTA da agência; formulário e chat só pelo shortcode do plugin
+    entrou: 'CTA "Solicite sua cotação" e shortcodes padrão; os 6 campos do formulário viraram o painel de dados para cotação'
 
 naoAplicado:
-  - supressor náutico LSI e SEIVE LUB — linhas da SEIVE que a Safe Mine não lista na página de supressão
-  - demais produtos da Safe Mine (geradores, BESS, torres de iluminação, bombas, compressores) — outra oferta, outra LP
-  - telefones e WhatsApp secundário (31) 99710-0350; dados de contato da SEIVE
-  - depoimentos do site da SEIVE (sem cargo nem empresa, e são clientes da fabricante)
-  - texto institucional da Safe Mine (missão, visão, valores) e a trajetória desde 2017
+  - LSI Náutico, embarcações e SEIVE LUB — fora da campanha
+  - WhatsApp secundário (31) 99710-0350 e contatos da SEIVE (telefones, e-mails, CNPJ, endereço em Contagem/MG)
+  - números da SEIVE (6.000 sistemas, 5.000 equipamentos salvos, R$ 6 bi preservados) — só entram com o bloco de clientes
+  - depoimentos do site da SEIVE (sem cargo nem empresa)
+  - demais produtos da Safe Mine (geradores, BESS, torres de iluminação, bombas, compressores)
 ```
 
-# Ficha de execução — Safe Mine Soluções / Sistemas de supressão de incêndio SEIVE
+# Ficha de execução — Safe Mine Soluções / Kit de Incêndio SEIVE
 
-> Ficha montada no editor a partir do material do cliente (site safeminesolucoes.com.br) e do fabricante representado (apresentação "Seive Supressor 2026" e site seive.com.br), no formato do padrão B2 LP Starter v2.8.0, seguindo o POP de estruturação de LPs. Não houve entrevista no chat nem briefing de Google Ads: o que depende do cliente está nas pendências.
+> Ficha montada no editor a partir do briefing de campanha `SEIVE_PESQ_SUPRESSAO_B2B` (briefing organizado de 28/10/2026), do site da Safe Mine (cliente), da apresentação e do site da SEIVE (fabricante) e do POP de estruturação de LPs da B2, no formato do padrão B2 LP Starter v2.8.0 — a versão publicada do starter; o briefing cita v2.9.0, que não existe no repositório.
 
 ## O que foi decidido
 
-LP da **Safe Mine Soluções**, revendedora que fornece os sistemas de supressão de incêndio **SEIVE**. A página se posiciona como a própria Safe Mine se posiciona no site: atendimento consultivo que conecta a operação à tecnologia SEIVE. Fabricação, certificação, normas, garantia por componente e número de instalações são da SEIVE e aparecem atribuídos a ela.
+LP de produto da **Safe Mine Soluções** para a campanha `SEIVE_PESQ_SUPRESSAO_B2B`, grupos "Supressão em máquinas" e "Supressão em equipamentos móveis". A palavra-chave principal é a do briefing, **supressão de incêndio SEIVE**, no H1 e no título da aba; o H1 vem do título do anúncio.
 
-A conta Google Ads da Safe Mine no MCC da B2 existe, mas não tem campanhas. A palavra-chave principal veio do Planejador de Palavras-chave (Brasil, últimos 12 meses): "sistema de supressão de incêndio" tem 140 buscas/mês e concorrência média, contra 50 de "supressão de incêndio" e 30 de "supressor de incêndio". As variações de cauda longa não têm volume medido e ficam como famílias propostas.
+O briefing de campanha foi organizado só com o material da SEIVE e trazia a SEIVE no núcleo. O cliente informado é a Safe Mine, que revende o sistema SEIVE: a marca, o rodapé e o WhatsApp são da Safe Mine, e a SEIVE aparece como fabricante.
 
-Campanha nacional: a Safe Mine afirma atender todo o território. A página abre com as quatro linhas da oferta, explica o caminho da análise ao pós-venda no painel escuro, prova com os setores que a própria página de supressão da Safe Mine lista, responde cinco dúvidas tiradas do FAQ do site e fecha com cinco diferenciais.
+A oferta é o Kit de Incêndio SEIVE, componente por componente (reservatório, painel, acionadores) mais o pós-venda. O apoio é o painel com os seis dados que o formulário da campanha pede. A prova são as quatro aplicações que a campanha prioriza (mineração, construção, florestal e agrícola) e a autoridade são os cinco diferenciais do briefing, sobre a frase "Proteção de ativos".
+
+Certificações, normas e área atendida ficam fora até a confirmação que o briefing pede.
 
 ## Viabilidade por fase
 
-| Fase       | Bloco            | Veredicto     | Responde                                     | Papéis                                     | O que falta                             |
-| ---------- | ---------------- | ------------- | -------------------------------------------- | ------------------------------------------ | --------------------------------------- |
-| Oferta     | `linhas`         | completo      | sistema-supressao, maquinas, alarme-deteccao | Engenharia, Compras                        | — (foto do sistema de alarme pendente)  |
-| Oferta     | `especificacoes` | insuficiente  | —                                            | —                                          | um único kit especificado               |
-| Oferta     | `vitrine`        | insuficiente  | —                                            | —                                          | 2 sistemas; o mínimo é 6                |
-| Apoio      | `processo`       | completo      | instalacao-manutencao                        | Manutenção de frota, Engenharia            | —                                       |
-| Apoio      | `identificar`    | insuficiente  | —                                            | —                                          | os 6 dados que o comercial pede         |
-| Apoio      | `situacoes`      | insuficiente  | —                                            | —                                          | gatilhos de contato reais               |
-| Prova      | `segmentos`      | completo      | setores                                      | Segurança do trabalho, Manutenção de frota | —                                       |
-| Prova      | `clientes`       | insuficiente  | —                                            | —                                          | clientes e números da própria Safe Mine |
-| Prova      | `aplicacoes`     | insuficiente  | —                                            | —                                          | as fotos são as mesmas dos segmentos    |
-| Autoridade | `perguntas`      | completo      | —                                            | Compras, Segurança do trabalho, Manutenção | —                                       |
-| Autoridade | `diferenciais`   | completo      | —                                            | Compras, Segurança do trabalho             | — (pessoa recortada pendente)           |
-| Autoridade | `escopo`         | não se aplica | —                                            | —                                          | não é consolidação de compras           |
+| Fase       | Bloco            | Veredicto     | Responde                                 | Papéis                | O que falta                                  |
+| ---------- | ---------------- | ------------- | ---------------------------------------- | --------------------- | -------------------------------------------- |
+| Oferta     | `linhas`         | completo      | produto-categoria                        | manutenção, frotas    | —                                            |
+| Oferta     | `especificacoes` | insuficiente  | —                                        | —                     | um único kit                                 |
+| Oferta     | `vitrine`        | insuficiente  | —                                        | —                     | um único kit                                 |
+| Apoio      | `identificar`    | completo      | transacional                             | manutenção, frotas    | —                                            |
+| Apoio      | `processo`       | quase         | transacional                             | manutenção            | sequência, responsáveis e marcos             |
+| Apoio      | `situacoes`      | insuficiente  | —                                        | —                     | gatilhos de contato reais                    |
+| Prova      | `aplicacoes`     | completo      | equipamento-aplicacao, setor             | frotas, segurança     | —                                            |
+| Prova      | `segmentos`      | completo      | setor                                    | segurança             | —                                            |
+| Prova      | `clientes`       | insuficiente  | —                                        | —                     | clientes e números da Safe Mine, autorizados |
+| Autoridade | `diferenciais`   | completo      | produto-categoria, equipamento-aplicacao | segurança, manutenção | — (pessoa recortada pendente)                |
+| Autoridade | `perguntas`      | completo      | —                                        | manutenção, segurança | —                                            |
+| Autoridade | `escopo`         | não se aplica | —                                        | —                     | não é consolidação de compras                |
+
+O briefing marcava `linhas`, `aplicacoes`, `segmentos` e `perguntas` como insuficientes. Com o material reunido nesta execução eles fecham a contagem: as linhas viram os componentes do kit, com fotos da apresentação; aplicações e segmentos usam as fotos de setor da apresentação, a escavadeira do site da SEIVE e o vocabulário de setor do site da SEIVE; as perguntas vêm do FAQ publicado pela Safe Mine. Pela regra fixa, `aplicacoes` ganha de `segmentos` (responde a mais famílias) e `diferenciais` ganha de `perguntas`.
 
 ## Núcleo
 
-| #   | Entrada            | Valor                                                             | Origem                                             |
-| --- | ------------------ | ----------------------------------------------------------------- | -------------------------------------------------- |
-| 1   | MARCA              | Safe Mine Soluções                                                | site da Safe Mine                                  |
-| 2   | MARCA_CURTA        | Safe Mine                                                         | site da Safe Mine                                  |
-| 15  | CAMPANHA           | `sistema de supressão de incêndio`                                | Planejador de Palavras-chave (conta sem campanhas) |
-| 3   | PRODUTO_PRINCIPAL  | Sistemas de supressão de incêndio                                 | ajustado à palavra-chave                           |
-| 4   | CONTEXTO_DE_USO    | máquinas e equipamentos                                           | página de supressão da Safe Mine                   |
-| 5   | PUBLICO            | Manutenção de frota, Segurança do trabalho, Engenharia, Compras   | proposto — confirmar com a Safe Mine               |
-| 6   | HERO               | Sistema SEIVE certificado ABNT · Atuação em até 15 s · Consultivo | páginas da Safe Mine e da SEIVE                    |
-| 7   | MARCAS_ATENDIDAS   | SEIVE, só por extenso                                             | site da Safe Mine                                  |
-| 8   | SELOS_DE_CONFIANCA | Garantia de 12 meses · Suporte especializado · Todo o Brasil      | páginas da Safe Mine                               |
-| 9   | ENDERECO           | Belo Horizonte/MG                                                 | "Quem somos" — endereço completo pendente          |
-| 10  | URL + PRIVACIDADE  | URL provisória na Vercel; sem política de privacidade             | pendência                                          |
-| 11  | SHORTCODES         | padrão do plugin                                                  | padrão                                             |
-| 12  | WHATSAPP           | 55 31 99553-8843 ("Orçamento por WhatsApp" do site)               | site da Safe Mine                                  |
-| 13  | STACK + PUBLICACAO | padrão da agência (Astro, `main` → `wp-build`)                    | padrão                                             |
-| 14  | TOKENS + FONTE     | azul e verde Safe Mine; Manrope (a mesma do site)                 | cores lidas do CSS do site                         |
+| #   | Entrada            | Valor                                                                                                          | Origem                                       |
+| --- | ------------------ | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| 1   | MARCA              | Safe Mine Soluções                                                                                             | cliente informado; o briefing dizia SEIVE    |
+| 2   | MARCA_CURTA        | Safe Mine                                                                                                      | site do cliente                              |
+| 15  | CAMPANHA           | `supressão de incêndio SEIVE`                                                                                  | briefing de campanha                         |
+| 3   | PRODUTO_PRINCIPAL  | Sistemas de supressão de incêndio SEIVE                                                                        | briefing (título do anúncio)                 |
+| 4   | CONTEXTO_DE_USO    | máquinas pesadas                                                                                               | briefing (título do anúncio)                 |
+| 5   | PUBLICO            | Gestores de manutenção, de segurança e de frotas                                                               | briefing                                     |
+| 6   | HERO               | Sistemas SEIVE para máquinas pesadas · Proteção automatizada para equipamentos móveis · Solução para mineração | briefing                                     |
+| 7   | MARCAS_ATENDIDAS   | SEIVE, só por extenso                                                                                          | site do cliente                              |
+| 8   | SELOS_DE_CONFIANCA | Detecção e atuação automáticas · Acionamento manual disponível · Garantia de 12 meses                          | briefing                                     |
+| 9   | ENDERECO           | Belo Horizonte/MG                                                                                              | site do cliente — endereço completo pendente |
+| 10  | URL + PRIVACIDADE  | URL na Vercel; sem política de privacidade                                                                     | pendência                                    |
+| 11  | SHORTCODES         | padrão do plugin                                                                                               | padrão                                       |
+| 12  | WHATSAPP           | 55 31 99553-8843 ("Orçamento por WhatsApp" da Safe Mine)                                                       | site do cliente                              |
+| 13  | STACK + PUBLICACAO | padrão da agência (Astro, `main` → `wp-build`)                                                                 | padrão                                       |
+| 14  | TOKENS + FONTE     | azul e verde Safe Mine; Manrope                                                                                | CSS do site do cliente                       |
 
 ## Pendências
 
-| O que falta                       | Quem resolve      | Especificação                                                                     |
-| --------------------------------- | ----------------- | --------------------------------------------------------------------------------- |
-| Banner do hero                    | designer          | 1981×900, fundo azul-escuro, máquina com sistema SEIVE entre 62% e 79% da largura |
-| Foto do sistema fixo de alarme    | Safe Mine         | PNG 800×600 com fundo transparente (central ou detector)                          |
-| Pessoa recortada dos diferenciais | Safe Mine         | 1220×1000, PNG com fundo transparente, especialista de corpo inteiro              |
-| Endereço completo e CNPJ          | Safe Mine         | para o rodapé                                                                     |
-| URL final e hospedagem            | B2 + Safe Mine    | o site atual não é WordPress; o plugin de atendimento roda em WordPress           |
-| Política de privacidade           | Safe Mine         | link, se existir                                                                  |
-| Público e comitê de compra        | Safe Mine         | confirmar os 4 papéis                                                             |
-| Direito de uso das fotos de setor | Safe Mine / SEIVE | 6 fotos vêm da apresentação da SEIVE                                              |
-
-## Conflitos com o padrão
-
-| O que o material pedia                       | Regra do padrão                     | O que entrou no lugar                                         |
-| -------------------------------------------- | ----------------------------------- | ------------------------------------------------------------- |
-| Material do fabricante numa LP do revendedor | não inventar fato                   | fatos técnicos atribuídos à SEIVE; Safe Mine como fornecedora |
-| Números divergentes nas fontes da SEIVE      | número sem fonte não entra          | só "mais de 6.000 sistemas", segundo a fabricante             |
-| ABNT PE-223 no texto × PE-289 no selo        | não inventar fato                   | "certificado pela ABNT", sem número do programa               |
-| Logos de clientes da SEIVE                   | clientes têm de ser do anunciante   | bloco de clientes fora                                        |
-| Superlativos do site da SEIVE                | claim sem comprovação não vai ao ar | nenhum; termos em `campanha.forbidden`                        |
-| Verde Safe Mine nos botões                   | botão com texto branco exige 4,5:1  | verde escurecido como cor de ação                             |
+| O que falta                       | Quem resolve      | Especificação                                                                              |
+| --------------------------------- | ----------------- | ------------------------------------------------------------------------------------------ |
+| Banner do hero                    | designer          | 1981×900, fundo azul-escuro, equipamento pesado com o kit SEIVE entre 62% e 79% da largura |
+| Pessoa recortada dos diferenciais | Safe Mine         | 1220×1000, PNG com fundo transparente, especialista de corpo inteiro                       |
+| Confirmar que a LP é da Safe Mine | B2                | o briefing de campanha trazia a SEIVE no núcleo                                            |
+| Certificados, normas e escopo     | SEIVE / Safe Mine | ABNT, NFPA, UL, ISO 9001 e patente — liberam selos e diferenciais                          |
+| Área atendida da campanha         | B2                | libera selo de área na cotação                                                             |
+| Endereço completo e CNPJ          | Safe Mine         | rodapé                                                                                     |
+| Hospedagem final                  | B2 + Safe Mine    | o plugin de atendimento roda em WordPress                                                  |
+| Etapas reais do atendimento       | Safe Mine         | libera `processo` como alternativa no apoio                                                |
+| Direito de uso das fotos de setor | Safe Mine / SEIVE | fotos da apresentação da SEIVE                                                             |
 
 ## Itens excedentes
 
-| Bloco       | Itens que entraram                                                | Itens guardados                                                                   |
-| ----------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `segmentos` | Mineração, Agro, Florestal, Portuário, Indústria, Energia, Móveis | Cana, algodão e locação → "Outras aplicações"                                     |
-| `perguntas` | 5 perguntas sobre abrangência, envio, venda, operação e garantia  | "Quais soluções a Safe Mine oferece?" e "Atende só mineração?" (repetem a página) |
-
-## Dados não usados pelo padrão
-
-WhatsApp secundário (31) 99710-0350, dados de contato da SEIVE, demais produtos da Safe Mine, linhas SEIVE fora do portfólio da Safe Mine (náutico LSI, SEIVE LUB), depoimentos do site da SEIVE e o texto institucional da Safe Mine.
+| Bloco          | Itens que entraram                           | Itens guardados                                              |
+| -------------- | -------------------------------------------- | ------------------------------------------------------------ |
+| `aplicacoes`   | Mineração, Construção, Florestal, Agrícola   | Indústria, Sucroenergético, Portuário (em `segmentos`, fora) |
+| `diferenciais` | os cinco do briefing                         | Certificação ABNT, ISO 9001, patente, normas NFPA e UL       |
+| `linhas`       | reservatório, painel, acionadores, pós-venda | sistema fixo de alarme e detecção (negativado pela campanha) |
