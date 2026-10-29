@@ -1,46 +1,85 @@
 ---
 /**
- * ESTRUTURA FIXA (PROMPT-PADRAO-LP 4.1.1). Não alterar layout, medidas ou ordem.
- * Muda só: logo (src/assets/LOGO.png), tagline (site.product) e vocabulário de CTA (content.cta).
+ * ESTRUTURA FIXA (PROMPT-PADRAO-LP 4.1.1), com o desvio visual aprovado para a Safe Mine
+ * (mockup de abertura, 29/10/2026 — docs/BRIEFING.md): barra flutuante de vidro azul sobre o
+ * banner, logo branco sem placa e CTA verde com seta. A ordem continua a do padrão —
+ * logo · tagline · CTA —, sem menu nem âncoras.
+ *
+ * O header é `fixed`: o hero desce por baixo dele, como no mockup. Ao rolar a página a barra
+ * escurece (`data-scrolled`) para continuar legível sobre as seções brancas.
  */
 import { Image } from 'astro:assets'
-import logo from '../assets/LOGO.png'
+import Icon from './Icon.astro'
+import logo from '../assets/header-logo.png'
 import { site } from '../data/site'
 import { header, cta } from '../data/content'
 ---
 
-<header class="sticky top-0 z-50 bg-primary-dark-900">
-  <div class="mx-auto flex max-w-page items-center justify-between gap-3 px-4 py-3 sm:gap-6 sm:px-6 lg:px-10">
-    {/* 1. Logo em placa branca "pendurada" abaixo da barra */}
-    <a href="/" class="flex shrink-0 items-center self-start">
-      <span class="-mt-3 -mb-10 flex items-center rounded-b-xl bg-neutral-light px-3 pt-1.5 pb-1 shadow-[0_10px_24px_-10px_rgba(0,0,0,0.55)] sm:px-6 sm:pt-2 sm:pb-1.5">
+<header class="site-header fixed inset-x-0 top-0 z-50 pt-3 lg:pt-5" data-header>
+  <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-10">
+    <div class="header-bar flex items-center justify-between gap-3 rounded-2xl border border-white/20 bg-primary-dark-900/60 py-2.5 pr-2.5 pl-4 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.65)] backdrop-blur-md sm:gap-6 sm:pl-6 lg:py-3 lg:pr-3 lg:pl-8">
+      {/* 1. Logo branco */}
+      <a href="/" class="flex shrink-0 items-center">
         <Image
           src={logo}
           alt={site.brand}
-          width={240}
-          height={200}
+          width={579}
+          height={124}
           format="webp"
           loading="eager"
           fetchpriority="low"
           decoding="async"
-          class="-mt-1 -mb-0.5 h-14 w-auto sm:-mt-2 sm:-mb-1 sm:h-24"
+          class="h-8 w-auto sm:h-10 lg:h-11"
         />
+      </a>
+
+      {/* 2. Tagline central (some no mobile) */}
+      <span class="hidden flex-1 text-center font-display text-[13px] font-semibold tracking-[0.3em] text-neutral-light/90 uppercase md:block lg:text-[15px]">
+        {header.tagline}
       </span>
-    </a>
 
-    {/* 2. Tagline central (some no mobile) */}
-    <span class="hidden flex-1 text-center font-display text-[15px] font-extrabold tracking-[0.14em] text-neutral-light uppercase sm:block lg:text-[17px]">
-      {header.tagline}
-    </span>
-
-    {/* 3. CTA laranja, uppercase, rótulo curto no mobile */}
-    <button
-      type="button"
-      data-cta="header-cta"
-      class="btn-slave-whats inline-flex shrink-0 items-center bg-accent-orange px-4 py-2 font-sans text-[11px] font-bold tracking-[0.04em] text-neutral-light uppercase transition-colors duration-200 hover:bg-accent-orange-dark sm:px-6 sm:py-2.5 sm:text-[13px] sm:tracking-[0.06em]"
-    >
-      <span class="sm:hidden">{cta.primaryShort}</span>
-      <span class="hidden sm:inline">{cta.primary}</span>
-    </button>
+      {/* 3. CTA verde com seta, rótulo curto no mobile */}
+      <button
+        type="button"
+        data-cta="header-cta"
+        class="btn-slave-whats inline-flex shrink-0 items-center gap-2 rounded-md bg-accent-orange px-4 py-2.5 font-sans text-[13px] font-bold text-neutral-light shadow-[0_10px_24px_-12px_rgba(0,0,0,0.6)] transition-colors duration-200 hover:bg-accent-orange-dark sm:px-6 sm:py-3 sm:text-[15px]"
+      >
+        <span class="sm:hidden">{cta.primaryShort}</span>
+        <span class="hidden sm:inline">{cta.primary}</span>
+        <Icon name="arrow-right" class="size-4 shrink-0" />
+      </button>
+    </div>
   </div>
 </header>
+
+<style>
+  .header-bar {
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease;
+  }
+
+  [data-header][data-scrolled] .header-bar {
+    background-color: rgb(10 29 77 / 0.92);
+    border-color: rgb(255 255 255 / 0.12);
+  }
+
+  /* Âncoras (#linhas, #cotacao) param abaixo da barra fixa. */
+  :global(html) {
+    scroll-padding-top: 6.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header-bar {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-header]').forEach((el) => {
+    const update = () => el.toggleAttribute('data-scrolled', window.scrollY > 40)
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+  })
+</script>

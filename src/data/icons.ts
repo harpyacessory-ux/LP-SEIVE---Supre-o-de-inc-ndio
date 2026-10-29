@@ -82,6 +82,8 @@ export const iconPaths = {
     '<path d="M12 3.3 5.2 6v5.3c0 4.2 2.8 7.9 6.8 9.4 4-1.5 6.8-5.2 6.8-9.4V6L12 3.3Z"/><path d="m9.2 11.9 2 2 3.6-4"/>',
   truck:
     '<rect x="2.8" y="6.8" width="10.6" height="9.4" rx="1"/><path d="M13.4 10.2h3.3l2.8 3v3h-6.1z"/><circle cx="7" cy="18" r="1.7"/><circle cx="16.4" cy="18" r="1.7"/>',
+  excavator:
+    '<rect x="2" y="16.5" width="12" height="4" rx="2"/><path d="M3 16.5V12h7.5v4.5"/><path d="M4.5 12V8.5h3.3L9 12"/><path d="m10.5 13 5-7.5 4.5 3"/><path d="m20 8.5 1.5 3.5-3 .5Z"/>',
   barcode: '<path d="M4 5v14M7.2 5v14M9.6 5v14M13 5v14M15.4 5v14M18 5v14M20.5 5v14"/>',
   'trend-up': '<path d="M3.5 16.5 9 11l4 4 7.5-8.5"/><path d="M15 6.5h5.5V12"/>',
   power: '<path d="M12 3.5v8"/><path d="M6.6 6.9a8 8 0 1 0 10.8 0"/>',

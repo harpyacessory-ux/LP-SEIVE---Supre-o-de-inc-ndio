@@ -88,19 +88,20 @@ conteudo:
   title: Supressão de incêndio SEIVE para máquinas pesadas | Safe Mine
   description: Supressão de incêndio SEIVE para máquinas pesadas e equipamentos móveis, com detecção e atuação automáticas e atendimento consultivo da Safe Mine.
   hero:
-    eyebrow: Proteção de máquinas
+    # Copy do mockup de abertura aprovado em 29/10/2026 (desvio registrado no BRIEFING.md)
+    eyebrow: Proteção para operações exigentes
     title: Sistemas de supressão de incêndio SEIVE para máquinas pesadas
-    text: Proteção automatizada para equipamentos móveis, máquinas industriais e operações de mineração, com atendimento consultivo da Safe Mine.
+    text: Proteção automatizada para equipamentos móveis e operações de mineração, com atendimento consultivo da Safe Mine.
     points:
-      - icon: shield
-        line1: Sistemas SEIVE
-        line2: para máquinas pesadas
-      - icon: zap
-        line1: Proteção automatizada
-        line2: para equipamentos móveis
+      - icon: gear
+        line1: Detecção e
+        line2: atuação automática
+      - icon: excavator
+        line1: Proteção para
+        line2: equipamentos móveis
       - icon: mountain
-        line1: Solução para
-        line2: mineração
+        line1: Aplicação em
+        line2: mineração e indústria
   quote:
     eyebrow: Solicite sua cotação
     title: Fale com quem entende de supressão de incêndio.
@@ -397,7 +398,7 @@ blocos:
     falta: a oferta é um sistema de proteção, não consolidação de compras de itens diferentes
 
 assets:
-  pendentes: [heroBg, diferenciais]
+  pendentes: [diferenciais]
 
 conflitos:
   - pede: núcleo do briefing de campanha com a SEIVE como marca (endereço em Contagem/MG e WhatsApp da SEIVE)

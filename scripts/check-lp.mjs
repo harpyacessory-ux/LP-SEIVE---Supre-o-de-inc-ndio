@@ -189,13 +189,16 @@ for (const f of astroFiles) {
 
 /* A8. Estrutura fixa: assinaturas do Header, Hero, Cotação e Footer ---------- */
 {
+  // Header e Hero repinados para a abertura da Safe Mine (mockup aprovado em 29/10/2026,
+  // registrado em docs/BRIEFING.md): barra flutuante fixa e hero com banner em sangria total,
+  // coluna de 380px para o chat ou o card do produto e faixa de três pontos.
   const expect = {
-    'Header.astro': ['sticky top-0 z-50', '-mt-3 -mb-10', 'rounded-b-xl', 'data-cta="header-cta"'],
+    'Header.astro': ['fixed inset-x-0 top-0 z-50', 'backdrop-blur-md', 'data-cta="header-cta"'],
     'Hero.astro': [
-      'grid-template-columns: minmax(0, 1fr) 270px 300px',
-      'right: var(--page-edge)',
-      'width: 1700px',
-      'lg:w-[300px]',
+      'grid-template-columns: minmax(0, 1fr) 380px',
+      'data-shortcode-slot',
+      'hero-product',
+      'hero-strip',
       'data-hero-grid',
       'fetchpriority="high"',
     ],

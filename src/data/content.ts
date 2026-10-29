@@ -10,9 +10,9 @@
  */
 import type { IconName } from './icons'
 import type { Photo } from './types'
-import { site } from './site'
 
 import heroBg from '@assets/heroBg.png'
+import heroProduto from '@assets/hero-produto.png'
 
 /* ------------------------------------------------------------------ tipos */
 
@@ -29,9 +29,12 @@ export interface TrustItem {
 
 /* ----------------------------------------------------------- vocabulário */
 
-/** Vocabulário fixo de CTA (PROMPT-PADRAO-LP, item 8). Não variar. */
+/**
+ * Vocabulário fixo de CTA (PROMPT-PADRAO-LP, item 8). Não variar.
+ * Desvio aprovado: o primário segue o mockup de abertura da Safe Mine ("Solicitar cotação").
+ */
 export const cta = {
-  primary: 'Solicite sua cotação',
+  primary: 'Solicitar cotação',
   primaryShort: 'Cotação',
   secondary: 'Identifique seu equipamento',
   card: 'Falar com especialista',
@@ -41,29 +44,44 @@ export const cta = {
 /* ------------------------------------------------------------------ header */
 
 export const header = {
-  tagline: site.product,
+  /** Tagline do mockup de abertura; o produto completo continua no H1 e no title. */
+  tagline: 'Supressão de incêndio SEIVE',
 } as const
 
 /* -------------------------------------------------------------------- hero */
 
 export const hero = {
-  eyebrow: 'Proteção de máquinas',
+  eyebrow: 'Proteção para operações exigentes',
   title: 'Sistemas de supressão de incêndio SEIVE para máquinas pesadas',
-  text: 'Proteção automatizada para equipamentos móveis, máquinas industriais e operações de mineração, com atendimento consultivo da Safe Mine.',
+  text: 'Proteção automatizada para equipamentos móveis e operações de mineração, com atendimento consultivo da Safe Mine.',
   banner: {
     src: heroBg,
-    alt: 'Equipamento pesado com o kit de incêndio SEIVE instalado',
+    alt: 'Escavadeira com reservatório supressor SEIVE instalado, em operação numa mina',
   },
+  /** Link secundário do mockup: rola até a seção do kit, não abre atendimento. */
+  secondary: { label: 'Conheça o sistema', href: '#linhas' },
+  /** Selo sob os botões. */
+  trust: { icon: 'shield', label: 'Solução dimensionada para o seu equipamento' },
+  /** Card do produto à direita (fora do WordPress, ou enquanto o chat não carrega). */
+  product: {
+    eyebrow: 'Sistema SEIVE',
+    text: 'Proteção embarcada para máquinas pesadas.',
+    photo: { src: heroProduto, alt: 'Reservatório supressor SEIVE com cilindro de nitrogênio' },
+  },
+  /** Faixa de três pontos na base do hero. */
   points: [
-    { icon: 'shield', line1: 'Sistemas SEIVE', line2: 'para máquinas pesadas' },
-    { icon: 'zap', line1: 'Proteção automatizada', line2: 'para equipamentos móveis' },
-    { icon: 'mountain', line1: 'Solução para', line2: 'mineração' },
+    { icon: 'gear', line1: 'Detecção e', line2: 'atuação automática' },
+    { icon: 'excavator', line1: 'Proteção para', line2: 'equipamentos móveis' },
+    { icon: 'mountain', line1: 'Aplicação em', line2: 'mineração e indústria' },
   ],
 } as const satisfies {
   eyebrow: string
   title: string
   text: string
   banner: Photo
+  secondary: { label: string; href: string }
+  trust: TrustItem
+  product: { eyebrow: string; text: string; photo: Photo }
   points: readonly [HeroPoint, HeroPoint, HeroPoint]
 }
 
