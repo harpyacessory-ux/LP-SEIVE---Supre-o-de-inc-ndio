@@ -163,6 +163,16 @@ A pedido do usuário, `src/components/sections/ProductLines.astro` (seção `lin
 - Copy de `linhas` atualizada na ficha e no arquivo de dados conforme o mockup; o contrato do manifesto continua atendido (4 itens, um escuro, 3 features cada).
 - **Atenção:** `npm run compose` sobrescreve este componente com o da biblioteca. Se a LP for recomposta, restaure-o do git depois do compose.
 
+## Desvio aprovado: painel "Dados para cotação" removido (29/10/2026)
+
+A pedido do usuário, a seção `identificar` (painel navy com os 6 dados para cotação, fase de apoio) saiu da página. A composição aplicada é `linhas · aplicacoes · diferenciais`.
+
+- O padrão exige a fase de apoio e um bloco navy em cada metade da página; o compositor recusa essa composição. Por isso `src/pages/index.astro` e `lp.manifest.json` foram ajustados à mão, e `SupportPanel.astro` e `identificar.ts` foram apagados.
+- `aplicacoes` passou do ritmo `centered-lead` para `even` (py-16), para o respiro depois da seção do kit ficar dentro da faixa do padrão.
+- `scripts/check-lp.mjs` (B2/B3) dispensa a fase de apoio quando ela está vazia e, nesse caso, aceita a metade branca sem bloco navy. Nenhuma outra regra de composição mudou.
+- A ficha mantém o bloco `identificar` (com comentário), e `npm run ficha` ainda o deriva na fase de apoio — a composição aplicada difere da derivada de propósito. **Não rode `npm run compose` sem reaplicar esta exceção.**
+- Alternativa que respeitaria o padrão: a seção "Como funciona" (`processo`, veredicto `quase`) no lugar do painel.
+
 ## Desvios técnicos da execução
 
 - `npm run screens` falha nesta pasta: o script monta o comando com `shell: true` e o caminho tem espaços. As capturas foram feitas com os mesmos parâmetros (porta 4873, Playwright 1.58.2, `?screens=1` e `?grid=1`), com caminho relativo e 5 s de espera.

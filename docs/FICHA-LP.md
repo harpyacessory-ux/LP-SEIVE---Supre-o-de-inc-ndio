@@ -168,6 +168,8 @@ blocos:
         photo: Família de reservatórios supressores SEIVE
         dark: true
 
+  # Removido da página a pedido do cliente em 29/10/2026 (docs/BRIEFING.md). O conteúdo
+  # fica aqui para voltar sem refazer a ficha; a derivação ainda o lista na fase de apoio.
   identificar:
     veredicto: completo
     responde: [transacional]

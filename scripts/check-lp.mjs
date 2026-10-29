@@ -721,6 +721,12 @@ if (!existsSync(MANIFEST)) {
 if (manifest) {
   const list = manifest.sections ?? []
 
+  // Exceção desta LP (29/10/2026, docs/BRIEFING.md): o painel "identificar" saiu a pedido
+  // do cliente e a fase de apoio ficou vazia. Sem ela, a página tem um único bloco navy
+  // (diferenciais) — a metade branca fica sem o seu. Só a fase de apoio é dispensada.
+  const FASES_DISPENSADAS = new Set(['apoio'])
+  const semApoio = FASES_DISPENSADAS.has('apoio') && !list.some((s) => s.phase === 'apoio')
+
   /* B1. Ordem das fases ---------------------------------------------------- */
   {
     const order = list.map((s) => MID_PHASES.indexOf(s.phase))
@@ -739,6 +745,7 @@ if (manifest) {
   for (const phase of MID_PHASES) {
     const def = phaseById(phase)
     const inPhase = list.filter((s) => s.phase === phase)
+    if (FASES_DISPENSADAS.has(phase) && !inPhase.length) continue
     if (inPhase.length < def.min)
       fail(MANIFEST, `fase "${phase}" com ${inPhase.length} seção(ões); mínimo ${def.min}`)
     if (inPhase.length > def.max)
@@ -776,10 +783,12 @@ if (manifest) {
       ['segunda metade (cinza)', list.slice(cut)],
     ]) {
       const carriers = run.filter((s) => s.carriesNavy).length
-      if (carriers !== 1)
+      // Sem a fase de apoio, a metade branca não tem portador navy (ver exceção acima).
+      const esperado = semApoio && label.startsWith('primeira') ? 0 : 1
+      if (carriers !== esperado)
         fail(
           MANIFEST,
-          `a ${label} precisa de exatamente 1 seção com bloco navy e tem ${carriers} — ` +
+          `a ${label} precisa de exatamente ${esperado} seção(ões) com bloco navy e tem ${carriers} — ` +
             'é o respiro escuro que sustenta o ritmo da página',
         )
     }

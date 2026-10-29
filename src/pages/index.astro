@@ -9,6 +9,11 @@
  *
  * Header, Hero, Cotação e Footer são estrutura fixa do padrão (regra 13) e estão
  * fora da biblioteca. Os dois slots de shortcode saem de `site.ts`.
+ *
+ * Exceção desta LP (29/10/2026, docs/BRIEFING.md): o painel "identificar" (fase de
+ * apoio) foi removido a pedido do cliente, e "aplicacoes" passou ao ritmo `even`.
+ * O compositor recusa essa composição, por isso este arquivo e `lp.manifest.json`
+ * foram ajustados à mão — não rode `npm run compose` sem reaplicar a exceção.
  */
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
@@ -16,7 +21,6 @@ import Hero from '../components/Hero.astro'
 import QuoteForm from '../components/QuoteForm.astro'
 import Footer from '../components/Footer.astro'
 import ProductLines from '../components/sections/ProductLines.astro'
-import SupportPanel from '../components/sections/SupportPanel.astro'
 import ApplicationsGallery from '../components/sections/ApplicationsGallery.astro'
 import WhyBrand from '../components/sections/WhyBrand.astro'
 import { shortcodes } from '../data/site'
@@ -30,8 +34,7 @@ import { shortcodes } from '../data/site'
       <Fragment slot="shortcode">{shortcodes.chat}</Fragment>
     </Hero>
     <ProductLines tone="light" rhythm="open" />
-    <SupportPanel tone="light" rhythm="panel-lead" />
-    <ApplicationsGallery tone="gray" rhythm="centered-lead" />
+    <ApplicationsGallery tone="gray" rhythm="even" />
     <WhyBrand tone="gray" rhythm="overlap" />
     <QuoteForm>
       <Fragment slot="shortcode">{shortcodes.form}</Fragment>
