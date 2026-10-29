@@ -1,0 +1,289 @@
+{
+  "standardVersion": "2.8.0",
+  "composedAt": "2026-10-29",
+  "library": "../Projetos B2/LP-STARTER-B2/sections",
+  "primitives": [
+    "BrandCarousel"
+  ],
+  "phases": {
+    "oferta": [
+      "linhas"
+    ],
+    "apoio": [
+      "processo"
+    ],
+    "prova": [
+      "segmentos"
+    ],
+    "autoridade": [
+      "perguntas",
+      "diferenciais"
+    ]
+  },
+  "sections": [
+    {
+      "slug": "linhas",
+      "id": "linhas",
+      "title": "Linhas de produto",
+      "phase": "oferta",
+      "component": "ProductLines.astro",
+      "data": "linhas.ts",
+      "dataExport": "productLines",
+      "carriesNavy": false,
+      "tone": "light",
+      "rhythm": "open",
+      "tones": [
+        "light",
+        "gray"
+      ],
+      "rhythms": [
+        "open",
+        "tight",
+        "even",
+        "flow"
+      ],
+      "exampleHash": "8d2664e3a490fc3d",
+      "ctas": [
+        "linhas-{item.id}"
+      ],
+      "contract": {
+        "itemsPath": "items",
+        "itemsMin": 3,
+        "itemsMax": 4,
+        "requiredItemFields": [
+          "id",
+          "tag",
+          "title",
+          "description",
+          "photo",
+          "features",
+          "dark"
+        ],
+        "itemArrays": {
+          "features": 3
+        },
+        "exactlyOneTrue": [
+          "dark"
+        ],
+        "maxLength": {
+          "text": 170,
+          "item.description": 90
+        }
+      },
+      "assets": [
+        {
+          "dir": "linhas",
+          "match": "linha-",
+          "files": "3 a 4 fotos de produto",
+          "spec": "PNG recortado 800×600, fundo transparente",
+          "width": 800,
+          "height": 600,
+          "alpha": true
+        },
+        {
+          "dir": "linhas",
+          "match": "marcas",
+          "files": "marcas.png",
+          "spec": "Foto das embalagens das marcas, 1280×800",
+          "width": 1280,
+          "height": 800,
+          "alpha": false
+        }
+      ]
+    },
+    {
+      "slug": "processo",
+      "id": "processo",
+      "title": "Como funciona (etapas)",
+      "phase": "apoio",
+      "component": "ProcessSteps.astro",
+      "data": "processo.ts",
+      "dataExport": "process",
+      "carriesNavy": true,
+      "tone": "light",
+      "rhythm": "panel-lead",
+      "tones": [
+        "light",
+        "gray"
+      ],
+      "rhythms": [
+        "panel-lead"
+      ],
+      "exampleHash": "d3aa70a611368bc0",
+      "ctas": [
+        "processo-cta"
+      ],
+      "contract": {
+        "itemsPath": "steps",
+        "itemsMin": 4,
+        "itemsMax": 6,
+        "requiredItemFields": [
+          "id",
+          "icon",
+          "title",
+          "description"
+        ],
+        "maxLength": {
+          "text": 170,
+          "microcopy": 48,
+          "item.description": 90
+        }
+      },
+      "assets": []
+    },
+    {
+      "slug": "segmentos",
+      "id": "segmentos",
+      "title": "Segmentos atendidos",
+      "phase": "prova",
+      "component": "SegmentsShowcase.astro",
+      "data": "segmentos.ts",
+      "dataExport": "segments",
+      "carriesNavy": false,
+      "tone": "light",
+      "rhythm": "tight",
+      "tones": [
+        "light",
+        "gray"
+      ],
+      "rhythms": [
+        "even",
+        "tight",
+        "flow"
+      ],
+      "exampleHash": "9281198d60ed8cda",
+      "ctas": [
+        "segmentos-{item.id}"
+      ],
+      "contract": {
+        "itemsPath": "items",
+        "itemsMin": 8,
+        "itemsMax": 8,
+        "requiredItemFields": [
+          "id",
+          "icon",
+          "label",
+          "description",
+          "bullets"
+        ],
+        "itemArrays": {
+          "bullets": 3
+        },
+        "lastItemId": "outras",
+        "maxLength": {
+          "text": 170
+        }
+      },
+      "assets": [
+        {
+          "dir": "segmentos",
+          "files": "8 fotos (opcionais)",
+          "spec": "JPG/PNG 1200×900 (4:3), planta do setor em operação",
+          "width": 1200,
+          "height": 900,
+          "alpha": false
+        }
+      ]
+    },
+    {
+      "slug": "perguntas",
+      "id": "perguntas",
+      "title": "Perguntas frequentes",
+      "phase": "autoridade",
+      "component": "FaqAccordion.astro",
+      "data": "perguntas.ts",
+      "dataExport": "faq",
+      "carriesNavy": false,
+      "tone": "gray",
+      "rhythm": "even",
+      "tones": [
+        "light",
+        "gray"
+      ],
+      "rhythms": [
+        "even",
+        "tight",
+        "flow"
+      ],
+      "exampleHash": "fd04d78727fd1e35",
+      "ctas": [
+        "perguntas-cta"
+      ],
+      "contract": {
+        "itemsPath": "items",
+        "itemsMin": 4,
+        "itemsMax": 8,
+        "requiredItemFields": [
+          "id",
+          "question",
+          "answer"
+        ],
+        "maxLength": {
+          "text": 170,
+          "item.answer": 320
+        },
+        "endsWith": {
+          "item.question": "?"
+        }
+      },
+      "assets": []
+    },
+    {
+      "slug": "diferenciais",
+      "id": "diferenciais",
+      "title": "Diferenciais",
+      "phase": "autoridade",
+      "component": "WhyBrand.astro",
+      "data": "diferenciais.ts",
+      "dataExport": "why",
+      "carriesNavy": true,
+      "tone": "gray",
+      "rhythm": "overlap",
+      "tones": [
+        "light",
+        "gray"
+      ],
+      "rhythms": [
+        "overlap"
+      ],
+      "exampleHash": "24683935274bbad0",
+      "ctas": [
+        "diferenciais-cta"
+      ],
+      "contract": {
+        "itemsPath": "reasons",
+        "itemsMin": 5,
+        "itemsMax": 5,
+        "requiredItemFields": [
+          "icon",
+          "title",
+          "description"
+        ],
+        "maxLength": {
+          "text": 320,
+          "item.description": 70
+        }
+      },
+      "assets": [
+        {
+          "dir": "diferenciais",
+          "match": "cenario",
+          "files": "cenario.jpg",
+          "spec": "Cenário/bancada 1600×900, sangra à direita do bloco navy",
+          "width": 1600,
+          "height": 900,
+          "alpha": false
+        },
+        {
+          "dir": "diferenciais",
+          "match": "pessoa",
+          "files": "pessoa.png",
+          "spec": "Pessoa recortada de corpo inteiro, 1220×1000, fundo transparente",
+          "width": 1220,
+          "height": 1000,
+          "alpha": true
+        }
+      ]
+    }
+  ]
+}

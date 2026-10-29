@@ -1,0 +1,133 @@
+---
+/**
+ * Como funciona — fase "apoio" da biblioteca B2.
+ *
+ * Mesmo painel navy do "identificar" (navy-premium + malha blueprint + cantos
+ * técnicos), para que as duas seções sejam irmãs visuais e possam se substituir
+ * sem alterar o ritmo da página. A diferença é o conteúdo: aqui a faixa é uma
+ * trilha de etapas numeradas, com linha de conexão entre elas.
+ */
+import Section from '@components/Section.astro'
+import Icon from '@components/Icon.astro'
+import Button from '@components/Button.astro'
+import Eyebrow from '@components/Eyebrow.astro'
+import type { SectionProps } from '@lib/layout'
+import { cta } from '@data/content'
+import { process } from '@data/sections/processo'
+
+type Props = SectionProps
+
+const { tone, rhythm } = Astro.props
+const steps = process.steps
+---
+
+<Section id="processo" tone={tone} rhythm={rhythm}>
+  <div class="navy-premium tech-corners relative overflow-hidden rounded-2xl border border-white/12 p-6 shadow-[0_14px_32px_-26px_rgba(0,24,48,0.5)] sm:p-8 lg:px-10 lg:py-9">
+    <span aria-hidden="true" class="blueprint-grid pointer-events-none absolute inset-0"></span>
+    <span
+      aria-hidden="true"
+      class="pointer-events-none absolute -top-24 -right-20 size-72 rounded-full bg-accent-orange/15 blur-3xl"
+    ></span>
+
+    <div class="relative">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+        <div class="max-w-2xl">
+          <Eyebrow tone="light">{process.eyebrow}</Eyebrow>
+          <h2 class="mt-3 font-display text-3xl leading-tight font-extrabold text-neutral-light sm:text-4xl">
+            {process.title}
+          </h2>
+          <p class="mt-3 font-sans text-[15px] leading-relaxed text-neutral-light/70">
+            {process.text}
+          </p>
+        </div>
+
+        <div class="flex flex-col items-stretch gap-2.5 lg:shrink-0 lg:items-end">
+          <Button
+            cta="processo-cta"
+            variant="primary"
+            class="w-full shadow-[0_14px_30px_-12px_rgba(255,107,0,0.85)] lg:w-auto"
+          >
+            {cta.primary}
+          </Button>
+          <span class="flex items-center justify-center gap-2 font-sans text-xs text-neutral-light/60 lg:justify-end">
+            <Icon name="shield" class="size-3.5 shrink-0 text-accent-orange" />
+            {process.microcopy}
+          </span>
+        </div>
+      </div>
+
+      <ol
+        class="process-track scroll-track mt-8 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-[repeat(var(--process-steps),minmax(0,1fr))]"
+        style={`--process-steps: ${steps.length}`}
+      >
+        {steps.map((step, i) => (
+          <li class="process-step relative flex w-[74%] shrink-0 snap-start flex-col gap-2.5 sm:w-auto">
+            <div class="flex items-center gap-3">
+              <span class="glass-badge relative z-[2] flex size-11 shrink-0 items-center justify-center rounded-full text-neutral-light">
+                <Icon name={step.icon} class="size-[18px]" />
+              </span>
+              <span
+                aria-hidden="true"
+                class="font-display text-[11px] font-extrabold tracking-[0.2em] text-neutral-light/45"
+              >
+                {String(i + 1).padStart(2, '0')}
+              </span>
+            </div>
+
+            <h3 class="font-display text-[15px] leading-snug font-extrabold text-neutral-light">
+              {step.title}
+            </h3>
+
+            <p class="font-sans text-[13px] leading-relaxed text-neutral-light/60">
+              {step.description}
+            </p>
+
+            {step.when && (
+              <span class="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-2.5 py-1 font-sans text-[10px] font-bold tracking-[0.16em] text-neutral-light/75 uppercase">
+                <Icon name="clock" class="size-3 shrink-0 text-accent-orange" />
+                {step.when}
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</Section>
+
+<style>
+  /* Linha de conexão entre as etapas, atrás dos badges. */
+  .process-step::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 44px;
+    z-index: 1;
+    height: 1px;
+    width: calc(100% - 44px + 1.25rem);
+    background-image: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 0.22) 0%,
+      rgb(255 255 255 / 0.22) 60%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Sem linha saindo do último card de cada fileira. */
+  .process-step:last-child::before {
+    display: none;
+  }
+
+  @media (width < 40rem) {
+    .process-step::before {
+      display: none;
+    }
+  }
+
+  @media (width >= 40rem) and (width < 64rem) {
+    .process-step:nth-child(2n)::before {
+      display: none;
+    }
+  }
+</style>

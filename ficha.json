@@ -1,0 +1,425 @@
+{
+  "ficha": 1,
+  "gerado": "2026-10-29T13:45:40.770Z",
+  "origem": "docs/FICHA-LP.md",
+  "padrao": "2.8.0",
+  "cliente": "Safe Mine Soluções",
+  "produto": "Sistemas de supressão de incêndio SEIVE",
+  "composicao": ["linhas", "processo", "segmentos", "perguntas", "diferenciais"],
+  "site": {
+    "brand": "Safe Mine Soluções",
+    "brandShort": "Safe Mine",
+    "product": "Sistemas de supressão de incêndio",
+    "context": "máquinas e equipamentos",
+    "url": "https://lp-seive-supressao-de-incendio.vercel.app/",
+    "address": "Belo Horizonte/MG",
+    "privacyUrl": "",
+    "whatsapp": "5531995538843",
+    "shortcodes": {
+      "chat": "[atendimento_chat id=\"default\"]",
+      "form": "[atendimento_form id=\"default-form\"]"
+    }
+  },
+  "campanha": {
+    "negatives": ["cozinha", "coifa", "sprinkler", "hidrante"],
+    "forbidden": [
+      "autorizado",
+      "autorizada",
+      "distribuidor oficial",
+      "representante oficial",
+      "exclusivo",
+      "exclusiva",
+      "líder",
+      "a única do Brasil",
+      "único no mundo"
+    ],
+    "mainKeyword": "sistema de supressão de incêndio",
+    "areaAtendida": null,
+    "onde": null,
+    "familias": [
+      {
+        "nome": "sistema-supressao",
+        "termos": [
+          "sistema de supressão de incêndio",
+          "supressão de incêndio",
+          "supressor de incêndio",
+          "sistema supressor de incêndio"
+        ],
+        "responde": "linhas"
+      },
+      {
+        "nome": "maquinas",
+        "termos": [
+          "supressão de incêndio em máquinas",
+          "sistema de combate a incêndio em máquinas",
+          "supressão de incêndio veicular",
+          "sistema de supressão de incêndio para máquinas pesadas"
+        ],
+        "responde": "linhas"
+      },
+      {
+        "nome": "alarme-deteccao",
+        "termos": [
+          "sistema de alarme e detecção de incêndio",
+          "detecção de incêndio para sala elétrica"
+        ],
+        "responde": "linhas"
+      },
+      {
+        "nome": "setores",
+        "termos": [
+          "sistema de supressão de incêndio para mineração",
+          "supressor de incêndio colheitadeira",
+          "combate a incêndio em máquinas agrícolas"
+        ],
+        "responde": "segmentos"
+      },
+      {
+        "nome": "instalacao-manutencao",
+        "termos": [
+          "instalação de sistema de supressão de incêndio",
+          "manutenção de sistema de supressão de incêndio"
+        ],
+        "responde": "processo"
+      }
+    ]
+  },
+  "publico": ["Manutenção de frota", "Segurança do trabalho", "Engenharia", "Compras"],
+  "marcas": {
+    "usarLogos": false,
+    "nomes": ["SEIVE"],
+    "autorizacao": "a Safe Mine cita a SEIVE por extenso no próprio site; uso da logo da SEIVE não autorizado por escrito"
+  },
+  "tokens": {
+    "padrao": false,
+    "cores": {
+      "primaria": "#102c73",
+      "marca": "#163b99",
+      "acao": "#4d7f22",
+      "verde-marca": "#7ba249"
+    }
+  },
+  "conteudo": {
+    "title": "Sistema de supressão de incêndio para máquinas | Safe Mine",
+    "description": "Sistema de supressão de incêndio SEIVE para máquinas e equipamentos, com atendimento consultivo da Safe Mine e suporte técnico em todo o Brasil.",
+    "hero": {
+      "eyebrow": "Proteção contra incêndio",
+      "title": "Sistema de supressão de incêndio para máquinas e equipamentos",
+      "text": "Sistemas SEIVE com detecção e atuação automáticas para máquinas de mineração, agrícolas, florestais, portuárias e geradores, com atendimento consultivo.",
+      "points": [
+        {
+          "icon": "shield",
+          "line1": "Sistema SEIVE",
+          "line2": "certificado ABNT"
+        },
+        {
+          "icon": "zap",
+          "line1": "Atuação automática",
+          "line2": "em até 15 s"
+        },
+        {
+          "icon": "users",
+          "line1": "Atendimento",
+          "line2": "consultivo"
+        }
+      ]
+    },
+    "quote": {
+      "eyebrow": "Solicite sua cotação",
+      "title": "Fale com quem entende de supressão de incêndio.",
+      "text": "Nossa equipe indica a solução SEIVE adequada para a sua máquina e a sua operação. Preencha o formulário ou fale direto conosco pelo WhatsApp.",
+      "trust": [
+        {
+          "icon": "shield",
+          "label": "Garantia de 12 meses"
+        },
+        {
+          "icon": "wrench",
+          "label": "Suporte técnico especializado"
+        },
+        {
+          "icon": "pin",
+          "label": "Atendimento em todo o Brasil"
+        }
+      ],
+      "lgpd": "Seus dados serão usados apenas para responder à sua solicitação de cotação, conforme a LGPD."
+    }
+  },
+  "secoes": {
+    "linhas": {
+      "dataExport": "productLines",
+      "data": "linhas.ts",
+      "conteudo": {
+        "eyebrow": "Soluções de proteção",
+        "title": "Supressão de incêndio para cada operação",
+        "text": "Sistemas SEIVE e soluções de detecção fornecidos pela Safe Mine para máquinas, ambientes críticos e equipamentos estacionários.",
+        "items": [
+          {
+            "id": "maquinas",
+            "tag": "Máquinas",
+            "title": "Supressão para máquinas",
+            "description": "Sistema SEIVE com detecção e atuação automáticas para máquinas pesadas e autopropelidas.",
+            "features": ["Atuação em até 15 s", "Botoeiras manuais", "Painel de monitoramento"],
+            "photo": "Reservatório de pó químico SEIVE",
+            "dark": false
+          },
+          {
+            "id": "alarme",
+            "tag": "Ambientes",
+            "title": "Alarme e detecção fixos",
+            "description": "Monitoramento permanente de salas elétricas, usinas e áreas técnicas, com alerta rápido.",
+            "features": ["Detecção e alarme", "Monitoramento contínuo", "Aplicação sob medida"],
+            "photo": "Central de alarme e detecção de incêndio",
+            "dark": false
+          },
+          {
+            "id": "estacionarios",
+            "tag": "Estacionários",
+            "title": "Geradores e estacionários",
+            "description": "Projeto dimensionado para geradores e equipamentos fixos que sustentam a operação.",
+            "features": ["Projeto dimensionado", "Grupos geradores", "Equipamentos estacionários"],
+            "photo": "Reservatório supressor SEIVE vermelho",
+            "dark": false
+          },
+          {
+            "id": "pecas",
+            "tag": "Pós-venda",
+            "title": "Peças genuínas e suporte",
+            "description": "Peças genuínas SEIVE e suporte técnico especializado para manter o sistema ativo.",
+            "features": ["Peças genuínas", "Suporte especializado", "Garantia de 12 meses"],
+            "photo": "Família de reservatórios supressores SEIVE",
+            "dark": true
+          }
+        ]
+      }
+    },
+    "processo": {
+      "dataExport": "process",
+      "data": "processo.ts",
+      "conteudo": {
+        "eyebrow": "Como funciona",
+        "title": "Da análise da máquina ao pós-venda",
+        "microcopy": "Atendimento consultivo em todo o Brasil",
+        "text": "Atendimento consultivo da Safe Mine do primeiro contato ao pós-venda, com sistema fabricado e certificado pela SEIVE.",
+        "steps": [
+          {
+            "id": "analise",
+            "icon": "search",
+            "title": "Análise",
+            "description": "Avaliamos a máquina, a aplicação e o ambiente para entender os pontos de risco."
+          },
+          {
+            "id": "especificacao",
+            "icon": "ruler",
+            "title": "Especificação",
+            "description": "Indicamos a solução SEIVE e o dimensionamento adequados a cada equipamento."
+          },
+          {
+            "id": "fabricacao",
+            "icon": "factory",
+            "title": "Fabricação",
+            "description": "Sistema produzido pela SEIVE em Contagem-MG, sob gestão da qualidade ISO 9001."
+          },
+          {
+            "id": "instalacao",
+            "icon": "wrench",
+            "title": "Instalação",
+            "description": "Montagem no equipamento, com painel de monitoramento e acionador na cabine."
+          },
+          {
+            "id": "suporte",
+            "icon": "shield",
+            "title": "Suporte",
+            "description": "Suporte técnico especializado e garantia de 12 meses contra defeitos de fabricação."
+          }
+        ]
+      }
+    },
+    "segmentos": {
+      "dataExport": "segments",
+      "data": "segmentos.ts",
+      "conteudo": {
+        "eyebrow": "Principais aplicações",
+        "title": "Proteção para cada setor da operação",
+        "text": "O sistema é dimensionado conforme o equipamento e a aplicação, em máquinas autopropelidas, móveis ou estacionárias.",
+        "items": [
+          {
+            "id": "mineracao",
+            "icon": "mountain",
+            "label": "Mineração",
+            "description": "Operação abrasiva, com ar carregado e descargas elétricas constantes, onde uma máquina parada pesa no custo da produção.",
+            "bullets": [
+              "Caminhões fora de estrada",
+              "Escavadeiras e carregadeiras",
+              "Perfuratrizes"
+            ],
+            "photo": "Caminhão fora de estrada em mina"
+          },
+          {
+            "id": "agronegocio",
+            "icon": "grid",
+            "label": "Agronegócio",
+            "description": "Máquinas que plantam e colhem em jornadas longas, com palha e poeira junto ao motor, onde uma parada custa a safra.",
+            "bullets": ["Colheitadeiras de grãos", "Tratores", "Pulverizadores autopropelidos"],
+            "photo": "Colheitadeira em lavoura de grãos"
+          },
+          {
+            "id": "florestal",
+            "icon": "leaf",
+            "label": "Florestal",
+            "description": "Colheita e baldeio de madeira, uma das operações de maior risco, com galhos e resíduos secos em volta do equipamento.",
+            "bullets": ["Harvesters", "Forwarders", "Escavadeiras florestais"],
+            "photo": "Máquina florestal carregando toras"
+          },
+          {
+            "id": "portuario",
+            "icon": "box",
+            "label": "Portuário",
+            "description": "Movimentação de contêineres e cargas em turnos contínuos, onde um incêndio para o pátio e atrasa a operação.",
+            "bullets": ["Reach stackers", "Empilhadeiras de contêineres", "Guindastes móveis"],
+            "photo": "Reach stacker movimentando contêiner"
+          },
+          {
+            "id": "industria",
+            "icon": "factory",
+            "label": "Indústria",
+            "description": "Equipamentos industriais e de pátio em operação contínua, onde um princípio de incêndio interrompe a produção.",
+            "bullets": ["Equipamentos de pátio", "Instalações industriais", "Áreas técnicas"],
+            "photo": "Equipamento de pátio em operação"
+          },
+          {
+            "id": "energia",
+            "icon": "bolt",
+            "label": "Geradores e energia",
+            "description": "Geradores, usinas e salas elétricas que sustentam a operação pedem detecção rápida e proteção sob medida.",
+            "bullets": ["Grupos geradores", "Usinas de energia", "Salas elétricas"],
+            "photo": "Gerador de energia em subestação"
+          },
+          {
+            "id": "moveis",
+            "icon": "truck",
+            "label": "Equipamentos móveis",
+            "description": "Escavadeiras, carregadeiras e outros autopropelidos de obras e infraestrutura, com projeto conforme os pontos de risco.",
+            "bullets": ["Escavadeiras", "Pás carregadeiras", "Máquinas de obras"],
+            "photo": "Escavadeira com sistema supressor SEIVE"
+          },
+          {
+            "id": "outras",
+            "icon": "dots",
+            "label": "Outras aplicações",
+            "description": "Avaliamos outras máquinas com risco de incêndio, como colhedoras de cana e algodão e frotas de locação.",
+            "bullets": ["Colhedoras de cana", "Colhedoras de algodão", "Frotas de locação"],
+            "photo": "Colhedora de algodão em lavoura"
+          }
+        ]
+      }
+    },
+    "perguntas": {
+      "dataExport": "faq",
+      "data": "perguntas.ts",
+      "conteudo": {
+        "eyebrow": "Perguntas frequentes",
+        "title": "O que perguntam antes de contratar",
+        "text": "As dúvidas mais comuns sobre o sistema e o atendimento. Não encontrou a sua? Fale com a nossa equipe.",
+        "items": [
+          {
+            "id": "abrangencia",
+            "question": "A Safe Mine atende empresas de outras regiões?",
+            "answer": "Sim. A atuação abrange todo o território nacional, considerando as características e as necessidades de cada projeto."
+          },
+          {
+            "id": "informacoes",
+            "question": "Quais informações devo enviar para solicitar um atendimento?",
+            "answer": "Conte sobre a operação, o equipamento e a aplicação. Segmento, localização, características da máquina e requisitos técnicos ajudam a equipe a indicar a solução adequada."
+          },
+          {
+            "id": "venda-direta",
+            "question": "A Safe Mine vende o sistema diretamente?",
+            "answer": "Sim. A Safe Mine fornece o sistema de supressão SEIVE e peças genuínas, com apoio na escolha dos itens adequados à aplicação e ao modelo da máquina."
+          },
+          {
+            "id": "operador",
+            "question": "O sistema depende do operador para funcionar?",
+            "answer": "Não. A detecção e a atuação são automáticas, e o sistema também conta com acionamentos manuais por botoeiras posicionadas à vista."
+          },
+          {
+            "id": "garantia",
+            "question": "Qual é a garantia do sistema SEIVE?",
+            "answer": "São 12 meses contra defeitos de fabricação. Segundo a SEIVE, alguns componentes têm garantia maior — painel 24 meses, ampolas 10 anos e reservatórios de pó 5 anos."
+          }
+        ]
+      }
+    },
+    "diferenciais": {
+      "dataExport": "why",
+      "data": "diferenciais.ts",
+      "conteudo": {
+        "eyebrow": "Por que a Safe Mine",
+        "titleLines": ["Tecnologia SEIVE", "atendimento Safe Mine."],
+        "text": "A Safe Mine conecta a sua operação ao sistema SEIVE, primeiro supressor certificado pela ABNT no Brasil e com mais de 6.000 instalações segundo a fabricante, do diagnóstico ao suporte técnico.",
+        "scene": "Acionador SEIVE instalado em máquina",
+        "person": "Especialista da Safe Mine",
+        "reasons": [
+          {
+            "icon": "users",
+            "title": "Atendimento consultivo",
+            "description": "Análise de cada operação para indicar a solução compatível."
+          },
+          {
+            "icon": "shield",
+            "title": "Tecnologia certificada",
+            "description": "Sistema SEIVE patenteado e certificado pela ABNT desde 2012."
+          },
+          {
+            "icon": "check",
+            "title": "Normas internacionais",
+            "description": "Atende a requisitos da NFPA 17, NFPA 122 e UL 1254."
+          },
+          {
+            "icon": "clock",
+            "title": "Garantia estendida",
+            "description": "Painel 24 meses, ampolas 10 anos e reservatórios 5 anos."
+          },
+          {
+            "icon": "pin",
+            "title": "Atuação nacional",
+            "description": "Atendimento a operações em todo o território nacional."
+          }
+        ]
+      }
+    }
+  },
+  "assets": {
+    "pendentes": ["heroBg", "linhas", "diferenciais"]
+  },
+  "fora": {
+    "clientes": {
+      "veredicto": "insuficiente",
+      "falta": "as logos e os números da apresentação são clientes e resultados da SEIVE, não da Safe Mine; faltam 4 logos autorizadas e 3 números da própria Safe Mine"
+    },
+    "identificar": {
+      "veredicto": "insuficiente",
+      "falta": "o comercial não informou os 6 dados que pede para dimensionar um sistema"
+    },
+    "situacoes": {
+      "veredicto": "insuficiente",
+      "falta": "a compra é preventiva e o comercial não listou os gatilhos de contato mais comuns"
+    },
+    "especificacoes": {
+      "veredicto": "insuficiente",
+      "falta": "há especificação de um único kit (reservatório de 15 kg); faltam 4 modelos com atributos comparáveis"
+    },
+    "vitrine": {
+      "veredicto": "insuficiente",
+      "falta": "são 2 sistemas de supressão no portfólio; a vitrine pede de 6 a 24 produtos"
+    },
+    "aplicacoes": {
+      "veredicto": "insuficiente",
+      "falta": "não há 4 aplicações distintas dos setores — as fotos disponíveis são as mesmas dos segmentos, que cobrem o reconhecimento com mais profundidade"
+    },
+    "escopo": {
+      "veredicto": "nao-se-aplica",
+      "falta": "a oferta é um sistema de proteção, não consolidação de compras de itens diferentes"
+    }
+  }
+}

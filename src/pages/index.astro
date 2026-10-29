@@ -1,0 +1,44 @@
+---
+/**
+ * ARQUIVO GERADO — não edite à mão.
+ *
+ * Saiu de `npm run compose`, que resolve a composição da biblioteca de seções e
+ * grava `lp.manifest.json`. Para mudar a página, mude a composição:
+ *
+ *   npm run compose -- <slugs da composição nova>
+ *
+ * Header, Hero, Cotação e Footer são estrutura fixa do padrão (regra 13) e estão
+ * fora da biblioteca. Os dois slots de shortcode saem de `site.ts`.
+ */
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import Hero from '../components/Hero.astro'
+import QuoteForm from '../components/QuoteForm.astro'
+import Footer from '../components/Footer.astro'
+import ProductLines from '../components/sections/ProductLines.astro'
+import ProcessSteps from '../components/sections/ProcessSteps.astro'
+import SegmentsShowcase from '../components/sections/SegmentsShowcase.astro'
+import FaqAccordion from '../components/sections/FaqAccordion.astro'
+import WhyBrand from '../components/sections/WhyBrand.astro'
+import { shortcodes } from '../data/site'
+---
+
+<Layout>
+  <Header />
+
+  <main id="main">
+    <Hero>
+      <Fragment slot="shortcode">{shortcodes.chat}</Fragment>
+    </Hero>
+    <ProductLines tone="light" rhythm="open" />
+    <ProcessSteps tone="light" rhythm="panel-lead" />
+    <SegmentsShowcase tone="light" rhythm="tight" />
+    <FaqAccordion tone="gray" rhythm="even" />
+    <WhyBrand tone="gray" rhythm="overlap" />
+    <QuoteForm>
+      <Fragment slot="shortcode">{shortcodes.form}</Fragment>
+    </QuoteForm>
+  </main>
+
+  <Footer />
+</Layout>
