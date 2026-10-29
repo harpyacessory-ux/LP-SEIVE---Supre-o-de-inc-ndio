@@ -173,6 +173,16 @@ A pedido do usuário, a seção `identificar` (painel navy com os 6 dados para c
 - A ficha mantém o bloco `identificar` (com comentário), e `npm run ficha` ainda o deriva na fase de apoio — a composição aplicada difere da derivada de propósito. **Não rode `npm run compose` sem reaplicar esta exceção.**
 - Alternativa que respeitaria o padrão: a seção "Como funciona" (`processo`, veredicto `quase`) no lugar do painel.
 
+## Desvio aprovado: aplicações sobre chamas (29/10/2026)
+
+A pedido do usuário, `src/components/sections/ApplicationsGallery.astro` (seção `aplicacoes`) segue o mockup "Heavy machinery applications over cinematic flames.png":
+
+- Fundo escuro com chamas nas laterais e embaixo, em sangria total por baixo do respiro da seção (`src/assets/fundo-chamas.jpg`). O mockup não veio com o fundo limpo: a imagem foi montada a partir dele, cobrindo a área do título e dos cards com o azul-escuro do próprio mockup — essa área fica atrás do conteúdo. A foto encaixa pela largura, ancorada embaixo, para as chamas laterais não serem cortadas. **Pendência:** trocar por um fundo de chamas limpo, sem texto, se o cliente tiver.
+- Cabeçalho centrado em branco ("Aplicações do sistema SEIVE"), título quebrado como no mockup a partir do tablet.
+- Quatro cards brancos com foto, título, descrição e o rodapé "Solicitar cotação →"; cada card é inteiro clicável por um botão sem texto que o cobre (`data-cta="aplicacoes-{id}"`).
+- A foto de construção passou a ser a escavadeira com o reservatório SEIVE, recortada do banner do hero (1120×840).
+- **Atenção:** `npm run compose` sobrescreve este componente com o da biblioteca.
+
 ## Desvios técnicos da execução
 
 - `npm run screens` falha nesta pasta: o script monta o comando com `shell: true` e o caminho tem espaços. As capturas foram feitas com os mesmos parâmetros (porta 4873, Playwright 1.58.2, `?screens=1` e `?grid=1`), com caminho relativo e 5 s de espera.

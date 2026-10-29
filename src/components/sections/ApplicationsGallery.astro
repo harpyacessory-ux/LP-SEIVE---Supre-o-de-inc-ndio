@@ -1,45 +1,73 @@
 ---
 /**
- * Galeria de aplicações — fase "prova" da biblioteca B2.
+ * Galeria de aplicações — fase "prova" da biblioteca B2, com o desvio visual aprovado para a
+ * Safe Mine (mockup das aplicações sobre chamas, 29/10/2026 — docs/BRIEFING.md).
  *
- * Cabeçalho centrado e 4 cards-botão com foto 4:3. O card inteiro é o CTA, por
- * isso o `<button>` envolve a foto e o texto.
+ * Fundo escuro com chamas nas bordas (imagem em sangria total por baixo do respiro da
+ * seção), cabeçalho centrado em branco e 4 cards brancos com foto, texto e o rodapé
+ * "Solicitar cotação". O card inteiro é clicável por um botão sem texto que o cobre
+ * (`data-cta="aplicacoes-{id}"`, rótulo em `aria-label`).
+ *
+ * Atenção: `npm run compose` sobrescreve este arquivo com o da biblioteca. Para recompor a
+ * LP sem perder o mockup, restaure-o do git depois do compose.
  */
 import { Image } from 'astro:assets'
 import Section from '@components/Section.astro'
 import Icon from '@components/Icon.astro'
-import SectionHeader from '@components/SectionHeader.astro'
 import type { SectionProps } from '@lib/layout'
+import { cta } from '@data/content'
 import { applications } from '@data/sections/aplicacoes'
+
+import fundo from '@assets/fundo-chamas.jpg'
 
 type Props = SectionProps
 
 const { tone, rhythm } = Astro.props
+
+// Quebra do mockup: "… máquinas pesadas / e equipamentos móveis" (só a partir do tablet).
+const quebra = applications.title.lastIndexOf(' e ')
+const tituloA = quebra > 0 ? applications.title.slice(0, quebra) : applications.title
+const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
 ---
 
-<Section id="aplicacoes" tone={tone} rhythm={rhythm}>
-  <SectionHeader
-    eyebrow={applications.eyebrow}
-    title={applications.title}
-    text={applications.text}
-    align="center"
-    width="4xl"
-  />
+<Section id="aplicacoes" tone={tone} rhythm={rhythm} class="relative isolate overflow-hidden">
+  {/* Fundo: chamas nas bordas, centro escuro. A foto encaixa pela largura, ancorada embaixo,
+      para as chamas laterais não serem cortadas; acima dela, o mesmo azul do topo da foto. */}
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[rgb(4_30_55)]">
+    <Image
+      src={fundo}
+      alt=""
+      format="webp"
+      widths={[768, 1280, 1672]}
+      sizes="100vw"
+      loading="lazy"
+      decoding="async"
+      class="absolute bottom-0 left-0 h-auto w-full min-w-[56rem] max-w-none sm:min-w-0 max-sm:left-1/2 max-sm:-translate-x-1/2"
+    />
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgb(4_30_55)_0%,rgb(4_30_55/0.6)_22%,transparent_45%)]"></div>
+  </div>
 
-  <ul class="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-    {applications.items.map((app, i) => (
-      <li>
-        <button
-          type="button"
-          data-cta={`aplicacoes-${app.id}`}
-          class="btn-slave-whats app-card group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-neutral-gray-200/70 bg-neutral-light text-left shadow-[0_1px_2px_rgba(13,29,48,0.05)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1.5 hover:border-accent-orange/50 hover:shadow-[0_28px_56px_-28px_rgba(0,33,71,0.35)]"
-        >
-          <span
-            aria-hidden="true"
-            class="absolute inset-x-0 top-0 z-10 h-[3px] origin-left scale-x-0 bg-accent-orange transition-transform duration-300 ease-out group-hover:scale-x-100"
-          />
+  <div class="pt-4 pb-8 lg:pt-6 lg:pb-10">
+    {/* Cabeçalho centrado */}
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="inline-flex items-center gap-3 font-sans text-[12px] font-semibold tracking-[0.24em] text-neutral-light/85 uppercase sm:text-[13px]">
+        <span aria-hidden="true" class="size-2 shrink-0 bg-accent-orange"></span>
+        {applications.eyebrow}
+      </p>
+      <h2 class="mx-auto mt-4 max-w-4xl font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.02em] text-neutral-light sm:text-[2.7rem] lg:text-[3.1rem]">
+        {tituloA} <br class="hidden sm:inline" />
+        {tituloB}
+      </h2>
+      <p class="mx-auto mt-5 max-w-3xl font-sans text-[16px] leading-relaxed text-neutral-light/75 sm:text-[17px]">
+        {applications.text}
+      </p>
+    </div>
 
-          <div class="relative aspect-[4/3] overflow-hidden bg-neutral-gray-100">
+    {/* Quatro cards */}
+    <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:gap-5">
+      {applications.items.map((app) => (
+        <li class="app-card group relative flex flex-col overflow-hidden rounded-2xl bg-neutral-light shadow-[0_30px_60px_-30px_rgba(0,0,0,0.85)] ring-1 ring-white/10 transition-transform duration-300 ease-out hover:-translate-y-1.5">
+          <div class="relative aspect-[4/3] overflow-hidden bg-primary-dark-900">
             <Image
               src={app.photo.src}
               alt={app.photo.alt}
@@ -47,43 +75,51 @@ const { tone, rhythm } = Astro.props
               width={640}
               loading="lazy"
               decoding="async"
-              class="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+              class="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.05]"
             />
-            <span
-              aria-hidden="true"
-              class="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-primary-dark-900/55 to-transparent"
-            />
-            <span class="absolute bottom-3 left-4 z-[2] font-display text-[11px] font-extrabold tracking-[0.2em] text-neutral-light/85">
-              {String(i + 1).padStart(2, '0')}
+          </div>
+
+          <div class="flex flex-1 flex-col px-6 pt-6 pb-5">
+            <h3 class="font-display text-[1.3rem] leading-snug font-extrabold tracking-[-0.015em] text-primary-dark-900 lg:text-[1.1rem] xl:text-[1.25rem]">
+              {app.label}
+            </h3>
+            <p class="mt-2 mb-6 font-sans text-[15px] leading-relaxed text-ink-soft">
+              {app.description}
+            </p>
+
+            <span class="mt-auto flex items-center justify-between border-t border-primary-dark/10 pt-4 font-sans text-[16px] font-semibold text-accent-orange">
+              {cta.primary}
+              <Icon
+                name="arrow-right"
+                class="size-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+              />
             </span>
           </div>
 
-          <div class="flex flex-1 items-start justify-between gap-3 px-5 pt-4 pb-5">
-            <span class="flex min-w-0 flex-col gap-1.5">
-              <span class="font-display text-lg leading-snug font-extrabold text-ink">
-                {app.label}
-              </span>
-              <span class="font-sans text-[13px] leading-relaxed text-ink-soft">
-                {app.description}
-              </span>
-            </span>
-            <span class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-neutral-gray-100 text-primary-dark transition-[background-color,color,transform] duration-300 group-hover:translate-x-0.5 group-hover:bg-accent-orange group-hover:text-neutral-light">
-              <Icon name="arrow-right" class="size-3.5" />
-            </span>
-          </div>
-        </button>
-      </li>
-    ))}
-  </ul>
+          {/* Card inteiro clicável: abre o atendimento com o rastreio da aplicação */}
+          <button
+            type="button"
+            data-cta={`aplicacoes-${app.id}`}
+            aria-label={`${cta.primary}: ${app.label}`}
+            class="btn-slave-whats absolute inset-0 z-[2] cursor-pointer rounded-2xl"
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
 </Section>
 
 <style>
+  .app-card :focus-visible {
+    outline-offset: 4px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .app-card,
-    .app-card * {
+    .app-card img,
+    .app-card svg {
       transition: none !important;
     }
-
     .app-card:hover {
       transform: none;
     }

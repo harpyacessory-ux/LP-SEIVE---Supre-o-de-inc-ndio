@@ -233,7 +233,7 @@ blocos:
     veredicto: completo
     responde: [equipamento-aplicacao, setor]
     papeis: [Gestores de frotas, Gestores de segurança]
-    eyebrow: Aplicações
+    eyebrow: Aplicações do sistema SEIVE
     title: Proteção para máquinas pesadas e equipamentos móveis
     text: Sistema dimensionado para cada tipo de máquina, em operações de mineração, construção, florestais e agrícolas.
     items:
@@ -244,7 +244,7 @@ blocos:
       - id: construcao
         label: Máquinas de construção
         description: Escavadeiras, carregadeiras e equipamentos móveis de obras e infraestrutura.
-        photo: Escavadeira com sistema supressor SEIVE
+        photo: Escavadeira com reservatório supressor SEIVE em mina
       - id: florestal
         label: Máquinas florestais
         description: Harvesters e forwarders cercados de galhos e resíduos secos na colheita de madeira.
@@ -279,7 +279,7 @@ blocos:
           - Escavadeiras
           - Pás carregadeiras
           - Máquinas de obras
-        photo: Escavadeira com sistema supressor SEIVE
+        photo: Escavadeira com reservatório supressor SEIVE em mina
       - id: florestal
         icon: leaf
         label: Florestal

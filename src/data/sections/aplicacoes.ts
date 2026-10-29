@@ -18,7 +18,7 @@ export interface Application {
 }
 
 export const applications = {
-  eyebrow: 'Aplicações',
+  eyebrow: 'Aplicações do sistema SEIVE',
   title: 'Proteção para máquinas pesadas e equipamentos móveis',
   text: 'Sistema dimensionado para cada tipo de máquina, em operações de mineração, construção, florestais e agrícolas.',
   items: [
@@ -33,7 +33,7 @@ export const applications = {
       id: 'construcao',
       label: 'Máquinas de construção',
       description: 'Escavadeiras, carregadeiras e equipamentos móveis de obras e infraestrutura.',
-      photo: { src: app2, alt: 'Escavadeira com sistema supressor SEIVE' },
+      photo: { src: app2, alt: 'Escavadeira com reservatório supressor SEIVE em mina' },
     },
     {
       id: 'florestal',
