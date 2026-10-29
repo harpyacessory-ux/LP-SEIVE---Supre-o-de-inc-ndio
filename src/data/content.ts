@@ -44,39 +44,57 @@ export const cta = {
 /* ------------------------------------------------------------------ header */
 
 export const header = {
-  /** Tagline do mockup de abertura; o produto completo continua no H1 e no title. */
-  tagline: 'Supressão de incêndio SEIVE',
+  /** Âncoras do mockup claro (desvio aprovado): duas, sem menu. */
+  links: [
+    { label: 'Sistema SEIVE', href: '#linhas' },
+    { label: 'Aplicações', href: '#aplicacoes' },
+  ],
 } as const
 
 /* -------------------------------------------------------------------- hero */
 
 export const hero = {
-  eyebrow: 'Proteção para operações exigentes',
-  title: 'Sistemas de supressão de incêndio SEIVE para máquinas pesadas',
-  text: 'Proteção automatizada para equipamentos móveis e operações de mineração, com atendimento consultivo da Safe Mine.',
+  eyebrow: 'Sistemas de supressão SEIVE',
+  /** H1 com a palavra-chave da campanha; o trecho `highlight` sai em verde. */
+  title: 'Supressão de incêndio SEIVE para máquinas pesadas.',
+  highlight: 'máquinas pesadas.',
+  text: 'Proteção automatizada para equipamentos móveis e operações de mineração. A Safe Mine ajuda a dimensionar a solução para a sua aplicação.',
   banner: {
     src: heroBg,
     alt: 'Escavadeira com reservatório supressor SEIVE instalado, em operação numa mina',
   },
   /** Link secundário do mockup: rola até a seção do kit, não abre atendimento. */
-  secondary: { label: 'Conheça o sistema', href: '#linhas' },
+  secondary: { label: 'Conhecer o sistema', href: '#linhas' },
   /** Selo sob os botões. */
-  trust: { icon: 'shield', label: 'Solução dimensionada para o seu equipamento' },
-  /** Card do produto à direita (fora do WordPress, ou enquanto o chat não carrega). */
+  trust: { icon: 'shield', label: 'Conte qual equipamento você precisa proteger.' },
+  /** Produto sobre a foto e legenda (fora do WordPress, ou enquanto o chat não carrega). */
   product: {
     eyebrow: 'Sistema SEIVE',
     text: 'Proteção embarcada para máquinas pesadas.',
     photo: { src: heroProduto, alt: 'Reservatório supressor SEIVE com cilindro de nitrogênio' },
   },
-  /** Faixa de três pontos na base do hero. */
+  /** Faixa de três pontos na base do hero: `line1` é o título, `line2` o apoio. */
   points: [
-    { icon: 'gear', line1: 'Detecção e', line2: 'atuação automática' },
-    { icon: 'excavator', line1: 'Proteção para', line2: 'equipamentos móveis' },
-    { icon: 'mountain', line1: 'Aplicação em', line2: 'mineração e indústria' },
+    {
+      icon: 'gear',
+      line1: 'Detecção e atuação automática',
+      line2: 'Resposta integrada ao sistema.',
+    },
+    {
+      icon: 'excavator',
+      line1: 'Proteção para equipamentos móveis',
+      line2: 'Solução para máquinas pesadas.',
+    },
+    {
+      icon: 'mountain',
+      line1: 'Aplicação em mineração e indústria',
+      line2: 'Seleção conforme a operação.',
+    },
   ],
 } as const satisfies {
   eyebrow: string
   title: string
+  highlight: string
   text: string
   banner: Photo
   secondary: { label: string; href: string }

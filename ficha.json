@@ -1,6 +1,6 @@
 {
   "ficha": 1,
-  "gerado": "2026-10-29T15:04:42.220Z",
+  "gerado": "2026-10-29T15:38:12.981Z",
   "origem": "docs/FICHA-LP.md",
   "padrao": "2.8.0",
   "cliente": "Safe Mine Soluções",
@@ -98,24 +98,24 @@
     "title": "Supressão de incêndio SEIVE para máquinas pesadas | Safe Mine",
     "description": "Supressão de incêndio SEIVE para máquinas pesadas e equipamentos móveis, com detecção e atuação automáticas e atendimento consultivo da Safe Mine.",
     "hero": {
-      "eyebrow": "Proteção para operações exigentes",
-      "title": "Sistemas de supressão de incêndio SEIVE para máquinas pesadas",
-      "text": "Proteção automatizada para equipamentos móveis e operações de mineração, com atendimento consultivo da Safe Mine.",
+      "eyebrow": "Sistemas de supressão SEIVE",
+      "title": "Supressão de incêndio SEIVE para máquinas pesadas.",
+      "text": "Proteção automatizada para equipamentos móveis e operações de mineração. A Safe Mine ajuda a dimensionar a solução para a sua aplicação.",
       "points": [
         {
           "icon": "gear",
-          "line1": "Detecção e",
-          "line2": "atuação automática"
+          "line1": "Detecção e atuação automática",
+          "line2": "Resposta integrada ao sistema."
         },
         {
           "icon": "excavator",
-          "line1": "Proteção para",
-          "line2": "equipamentos móveis"
+          "line1": "Proteção para equipamentos móveis",
+          "line2": "Solução para máquinas pesadas."
         },
         {
           "icon": "mountain",
-          "line1": "Aplicação em",
-          "line2": "mineração e indústria"
+          "line1": "Aplicação em mineração e indústria",
+          "line2": "Seleção conforme a operação."
         }
       ]
     },

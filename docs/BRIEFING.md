@@ -108,7 +108,7 @@ Diferenças em relação aos veredictos do briefing organizado: `linhas` (compon
 | Asset           | Arquivo esperado              | Especificação               | Status                                                                                        |
 | --------------- | ----------------------------- | --------------------------- | --------------------------------------------------------------------------------------------- |
 | Logo            | `src/assets/LOGO.png`         | 240×200, fundo transparente | entregue — logo do site da Safe Mine (og:image e JSON-LD)                                     |
-| Logo do header  | `src/assets/header-logo.png`  | branco, 579×124             | entregue — mesmo logo em branco, para o header escuro do mockup                               |
+| Logo do header  | `src/assets/header-logo.png`  | 579×124                     | entregue — mesmo logo, recortado para a barra branca do mockup                                |
 | Banner do hero  | `src/assets/heroBg.png`       | 1981×900, brief 4.1.3       | entregue — "Orange Excavator in Rocky Quarry.png" (1870×841), enviado em 29/10/2026           |
 | Produto do hero | `src/assets/hero-produto.png` | PNG recortado               | entregue — "Red SEIVE Fire Suppression Reservoir Assembly.png", também usado em `linha-1.png` |
 
@@ -141,15 +141,16 @@ Direito de uso das fotos de máquinas da apresentação da SEIVE a confirmar.
 
 LSI Náutico e SEIVE LUB; WhatsApp secundário (31) 99710-0350; contatos da SEIVE (telefones, e-mails, CNPJ, endereço); números da SEIVE (6.000 sistemas, 5.000 equipamentos salvos, R$ 6 bi preservados), que só entram com o bloco de clientes; depoimentos do site da SEIVE; demais produtos da Safe Mine; texto institucional.
 
-## Desvio aprovado: abertura no mockup da Safe Mine (29/10/2026)
+## Desvio aprovado: abertura no mockup claro da Safe Mine (29/10/2026)
 
-A pedido do usuário, Header e Hero seguem o mockup "SafeMine glass header over mining scene.png", como já foi feito na LP da Print Master:
+A pedido do usuário, Header e Hero seguem o mockup claro enviado em 29/10/2026 (que substituiu um mockup escuro aplicado no mesmo dia), como já foi feito na LP da Print Master:
 
-- `Header.astro`: barra flutuante de vidro azul (`fixed`, não `sticky`), logo branco sem a placa, tagline "Supressão de incêndio SEIVE" e CTA verde com seta. A ordem logo · tagline · CTA e a ausência de menu continuam as do padrão. A barra escurece ao rolar, para continuar legível sobre as seções brancas.
-- `Hero.astro`: banner em sangria total por baixo do header, eyebrow com traço verde, H1 em três linhas, CTA primário e link secundário "Conheça o sistema" (âncora para `#linhas`, com `data-cta="hero-secondary"`; rola a página, não abre atendimento), selo "Solução dimensionada para o seu equipamento", card do produto à direita (380px) e faixa de três pontos em largura total.
-- **Chat do plugin:** o slot continua no hero, na coluna de 380px. Fora do WordPress ele só contém o texto cru do shortcode e o CSS o esconde; o card do produto aparece no lugar. Quando o plugin renderiza o chat, o chat ocupa a coluna e o card sai.
+- `Header.astro`: barra branca flutuante (`fixed`, não `sticky`), logo colorido sem a placa, duas âncoras do mockup ("Sistema SEIVE" → `#linhas`, "Aplicações" → `#aplicacoes`, escondidas no mobile) e CTA verde com seta. O padrão não prevê menu; as duas âncoras entraram porque estão no mockup. A sombra aumenta ao rolar.
+- `Hero.astro`: fundo claro; eyebrow "Sistemas de supressão SEIVE" com traço verde; H1 em três linhas com "máquinas pesadas." em verde; CTA primário e link "Conhecer o sistema" (âncora para `#linhas`, com `data-cta="hero-secondary"`; rola a página, não abre atendimento); selo "Conte qual equipamento você precisa proteger."; à direita, a foto da mina em card arredondado (o banner entra ampliado e ancorado à direita, para o azul do lado esquerdo ficar fora), o reservatório SEIVE sobreposto ao canto e a legenda "Sistema SEIVE"; faixa clara de três pontos com título e apoio.
+- **H1:** o mockup trazia "Proteção contra incêndio para máquinas pesadas.", sem a palavra-chave da campanha. Ficou "Supressão de incêndio SEIVE para máquinas pesadas.", com o mesmo visual — a regra 17 e o briefing de campanha exigem o termo no H1.
+- **Chat do plugin:** o slot continua no hero, na coluna da cena. Fora do WordPress ele só contém o texto cru do shortcode e o CSS o esconde; a cena aparece no lugar. Quando o plugin renderiza o chat, o chat ocupa a coluna e a cena sai.
 - Vocabulário de CTA: o primário passou a "Solicitar cotação", como no mockup, em toda a página.
-- Ícone novo no catálogo: `excavator`. Token novo: `--color-brand-green` (#7ba249), só para ícones e marcadores sobre fundo escuro.
+- Ícone novo no catálogo: `excavator`. O preload do LCP em `Layout.astro` usa o mesmo `sizes` da foto do hero.
 - A assinatura A8 de `scripts/check-lp.mjs` foi repinada para essa abertura.
 
 ## Desvios técnicos da execução

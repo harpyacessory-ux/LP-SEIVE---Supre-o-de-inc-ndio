@@ -1,12 +1,11 @@
 ---
 /**
  * ESTRUTURA FIXA (PROMPT-PADRAO-LP 4.1.1), com o desvio visual aprovado para a Safe Mine
- * (mockup de abertura, 29/10/2026 — docs/BRIEFING.md): barra flutuante de vidro azul sobre o
- * banner, logo branco sem placa e CTA verde com seta. A ordem continua a do padrão —
- * logo · tagline · CTA —, sem menu nem âncoras.
+ * (mockup claro de abertura, 29/10/2026 — docs/BRIEFING.md): barra branca flutuante, logo
+ * colorido sem placa, duas âncoras do mockup e CTA verde com seta. Sem menu além delas.
  *
- * O header é `fixed`: o hero desce por baixo dele, como no mockup. Ao rolar a página a barra
- * escurece (`data-scrolled`) para continuar legível sobre as seções brancas.
+ * O header é `fixed`: o hero começa por baixo dele. Ao rolar a página a sombra aumenta
+ * (`data-scrolled`) para separar a barra das seções brancas.
  */
 import { Image } from 'astro:assets'
 import Icon from './Icon.astro'
@@ -15,10 +14,10 @@ import { site } from '../data/site'
 import { header, cta } from '../data/content'
 ---
 
-<header class="site-header fixed inset-x-0 top-0 z-50 pt-3 lg:pt-5" data-header>
+<header class="site-header fixed inset-x-0 top-0 z-50 pt-3 lg:pt-4" data-header>
   <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-10">
-    <div class="header-bar flex items-center justify-between gap-3 rounded-2xl border border-white/20 bg-primary-dark-900/60 py-2.5 pr-2.5 pl-4 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.65)] backdrop-blur-md sm:gap-6 sm:pl-6 lg:py-3 lg:pr-3 lg:pl-8">
-      {/* 1. Logo branco */}
+    <div class="header-bar flex items-center justify-between gap-4 rounded-2xl border border-ink/5 bg-neutral-light/95 py-2.5 pr-2.5 pl-4 shadow-[0_12px_32px_-20px_rgba(16,44,115,0.45)] backdrop-blur-md sm:pl-6 lg:py-3 lg:pr-3 lg:pl-9">
+      {/* 1. Logo */}
       <a href="/" class="flex shrink-0 items-center">
         <Image
           src={logo}
@@ -33,44 +32,54 @@ import { header, cta } from '../data/content'
         />
       </a>
 
-      {/* 2. Tagline central (some no mobile) */}
-      <span class="hidden flex-1 text-center font-display text-[13px] font-semibold tracking-[0.3em] text-neutral-light/90 uppercase md:block lg:text-[15px]">
-        {header.tagline}
-      </span>
+      {/* 2. Âncoras do mockup (somem no mobile) + CTA verde */}
+      <div class="flex items-center gap-6 lg:gap-12">
+        <nav class="header-nav hidden items-center gap-10 md:flex" aria-label="Seções da página">
+          {header.links.map((link) => (
+            <a
+              href={link.href}
+              class="font-sans text-[15px] font-medium text-ink transition-colors duration-200 hover:text-accent-orange lg:text-base"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
 
-      {/* 3. CTA verde com seta, rótulo curto no mobile */}
-      <button
-        type="button"
-        data-cta="header-cta"
-        class="btn-slave-whats inline-flex shrink-0 items-center gap-2 rounded-md bg-accent-orange px-4 py-2.5 font-sans text-[13px] font-bold text-neutral-light shadow-[0_10px_24px_-12px_rgba(0,0,0,0.6)] transition-colors duration-200 hover:bg-accent-orange-dark sm:px-6 sm:py-3 sm:text-[15px]"
-      >
-        <span class="sm:hidden">{cta.primaryShort}</span>
-        <span class="hidden sm:inline">{cta.primary}</span>
-        <Icon name="arrow-right" class="size-4 shrink-0" />
-      </button>
+        <button
+          type="button"
+          data-cta="header-cta"
+          class="btn-slave-whats inline-flex shrink-0 items-center gap-2.5 rounded-lg bg-accent-orange px-4 py-2.5 font-sans text-[13px] font-semibold text-neutral-light shadow-[0_10px_22px_-12px_rgba(77,127,34,0.8)] transition-colors duration-200 hover:bg-accent-orange-dark sm:px-7 sm:py-3.5 sm:text-[16px]"
+        >
+          <span class="sm:hidden">{cta.primaryShort}</span>
+          <span class="hidden sm:inline">{cta.primary}</span>
+          <Icon name="arrow-right" class="size-4 shrink-0 sm:size-5" />
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
 <style>
-  .header-bar {
-    transition:
-      background-color 250ms ease,
-      border-color 250ms ease;
+  .header-bar,
+  .header-nav a,
+  button {
+    transition-property: box-shadow, color, background-color;
+    transition-duration: 200ms;
   }
 
   [data-header][data-scrolled] .header-bar {
-    background-color: rgb(10 29 77 / 0.92);
-    border-color: rgb(255 255 255 / 0.12);
+    box-shadow: 0 16px 36px -18px rgb(16 44 115 / 0.55);
   }
 
-  /* Âncoras (#linhas, #cotacao) param abaixo da barra fixa. */
+  /* Âncoras (#linhas, #aplicacoes, #cotacao) param abaixo da barra fixa. */
   :global(html) {
     scroll-padding-top: 6.5rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .header-bar {
+    .header-bar,
+    .header-nav a,
+    button {
       transition: none;
     }
   }
