@@ -112,15 +112,15 @@ Diferenças em relação aos veredictos do briefing organizado: `linhas` (compon
 | Banner do hero  | `src/assets/heroBg.png`       | 1981×900, brief 4.1.3       | entregue — "Orange Excavator in Rocky Quarry.png" (1870×841), enviado em 29/10/2026           |
 | Produto do hero | `src/assets/hero-produto.png` | PNG recortado               | entregue — "Red SEIVE Fire Suppression Reservoir Assembly.png", também usado em `linha-1.png` |
 
-| Asset                        | Arquivo esperado                             | Especificação                 | Status                                                                 |
-| ---------------------------- | -------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------- |
-| Reservatório                 | `src/assets/linhas/linha-1.png`              | PNG 800×600 recortado         | entregue — render enviado em 29/10/2026                                |
-| Painel de monitoramento      | `src/assets/linhas/linha-2.png`              | PNG 800×600 recortado         | entregue — apresentação SEIVE (original 328×219)                       |
-| Acionador                    | `src/assets/linhas/linha-3.png`              | PNG 800×600 recortado         | entregue — apresentação SEIVE                                          |
-| Peças genuínas (card escuro) | `src/assets/linhas/marcas.png`               | 1280×800                      | entregue — família de reservatórios da apresentação                    |
-| Aplicações 1–4               | `src/assets/aplicacoes/aplicacao-{1..4}.png` | 1200×900 (4:3)                | entregues — apresentação SEIVE e site da SEIVE; a florestal tem 899 px |
-| Cenário dos diferenciais     | `src/assets/diferenciais/cenario.jpg`        | 1600×900                      | entregue — foto do acionador do site da Safe Mine (1280×720)           |
-| Pessoa dos diferenciais      | `src/assets/diferenciais/pessoa.png`         | 1220×1000, fundo transparente | **pendente**                                                           |
+| Asset                        | Arquivo esperado                             | Especificação                 | Status                                                                                                              |
+| ---------------------------- | -------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Reservatório                 | `src/assets/linhas/linha-1.png`              | PNG 800×600 recortado         | entregue — render enviado em 29/10/2026                                                                             |
+| Painel de monitoramento      | `src/assets/linhas/linha-2.png`              | PNG 800×600 recortado         | entregue — apresentação SEIVE (original 328×219)                                                                    |
+| Acionador                    | `src/assets/linhas/linha-3.png`              | PNG 800×600 recortado         | entregue — apresentação SEIVE                                                                                       |
+| Peças genuínas (card escuro) | `src/assets/linhas/marcas.png`               | 1280×800                      | entregue — família de reservatórios da apresentação                                                                 |
+| Aplicações 1–4               | `src/assets/aplicacoes/aplicacao-{1..4}.png` | 1200×900 (4:3)                | entregues — apresentação SEIVE e site da SEIVE; a florestal tem 899 px                                              |
+| Cenário dos diferenciais     | `src/assets/diferenciais/cenario.jpg`        | 1600×900                      | entregue — foto do acionador do site da Safe Mine (1280×720)                                                        |
+| Pessoa dos diferenciais      | `src/assets/diferenciais/pessoa.png`         | 1220×1000, fundo transparente | entregue em 30/10/2026 — "Smiling Fire-Safety Technician Cutout.png" (1024×1536), enquadrado do capacete ao quadril |
 
 Direito de uso das fotos de máquinas da apresentação da SEIVE a confirmar.
 
@@ -192,6 +192,6 @@ A pedido do usuário, `src/components/sections/ApplicationsGallery.astro` (seç�
 ## Estado da entrega
 
 - [x] Primeira versão de pé (`npm run check:lp:rascunho` passa) em: 29/10/2026
-- [ ] Todos os assets reais entregues
-- [ ] `npm run verify` passa inteiro em: `____/____/______`
+- [x] Todos os assets reais entregues (30/10/2026; `assets.pendentes` vazio)
+- [x] `npm run verify` passa inteiro em: 30/10/2026 — 0 erros, 1 aviso (foto florestal com 899 px de largura)
 - [x] Padrão B2 versão: `2.8.0`

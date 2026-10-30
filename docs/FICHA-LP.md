@@ -403,7 +403,7 @@ blocos:
     falta: a oferta é um sistema de proteção, não consolidação de compras de itens diferentes
 
 assets:
-  pendentes: [diferenciais]
+  pendentes: []
 
 conflitos:
   - pede: núcleo do briefing de campanha com a SEIVE como marca (endereço em Contagem/MG e WhatsApp da SEIVE)

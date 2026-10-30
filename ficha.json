@@ -1,6 +1,6 @@
 {
   "ficha": 1,
-  "gerado": "2026-10-30T14:32:24.889Z",
+  "gerado": "2026-10-30T15:30:59.146Z",
   "origem": "docs/FICHA-LP.md",
   "padrao": "2.8.0",
   "cliente": "Safe Mine Soluções",
@@ -317,7 +317,7 @@
     }
   },
   "assets": {
-    "pendentes": ["diferenciais"]
+    "pendentes": []
   },
   "fora": {
     "processo": {
