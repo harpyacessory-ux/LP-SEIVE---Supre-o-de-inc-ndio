@@ -173,12 +173,12 @@ A pedido do usuário, a seção `identificar` (painel navy com os 6 dados para c
 - A ficha mantém o bloco `identificar` (com comentário), e `npm run ficha` ainda o deriva na fase de apoio — a composição aplicada difere da derivada de propósito. **Não rode `npm run compose` sem reaplicar esta exceção.**
 - Alternativa que respeitaria o padrão: a seção "Como funciona" (`processo`, veredicto `quase`) no lugar do painel.
 
-## Desvio aprovado: aplicações sobre chamas (29/10/2026)
+## Desvio aprovado: aplicações sobre chamas (29–30/10/2026)
 
-A pedido do usuário, `src/components/sections/ApplicationsGallery.astro` (seção `aplicacoes`) segue o mockup "Heavy machinery applications over cinematic flames.png":
+A pedido do usuário, `src/components/sections/ApplicationsGallery.astro` (seção `aplicacoes`) segue o mockup claro "SEIVE Fire Protection for Heavy Equipment.png" (30/10/2026), que substituiu uma versão escura com chamas aplicada na véspera:
 
-- Fundo escuro com chamas nas laterais e embaixo, em sangria total por baixo do respiro da seção (`src/assets/fundo-chamas.jpg`). O mockup não veio com o fundo limpo: a imagem foi montada a partir dele, cobrindo a área do título e dos cards com o azul-escuro do próprio mockup — essa área fica atrás do conteúdo. A foto encaixa pela largura, ancorada embaixo, para as chamas laterais não serem cortadas. **Pendência:** trocar por um fundo de chamas limpo, sem texto, se o cliente tiver.
-- Cabeçalho centrado em branco ("Aplicações do sistema SEIVE"), título quebrado como no mockup a partir do tablet.
+- Fundo claro com chamas suaves nos cantos de baixo, em sangria total por baixo do respiro da seção (`src/assets/fundo-chamas-claro.jpg`, do arquivo limpo "Pale background with subtle corner flames.png" enviado pelo usuário). A foto encaixa pela largura, ancorada embaixo; acima dela, o mesmo tom claro.
+- Cabeçalho à esquerda: traço verde, eyebrow "Aplicações do sistema SEIVE" e título em duas linhas a partir do tablet, a segunda ("e equipamentos móveis") em verde.
 - Quatro cards brancos com foto, título, descrição e o rodapé "Solicitar cotação →"; cada card é inteiro clicável por um botão sem texto que o cobre (`data-cta="aplicacoes-{id}"`).
 - A foto de construção passou a ser a escavadeira com o reservatório SEIVE, recortada do banner do hero (1120×840).
 - **Atenção:** `npm run compose` sobrescreve este componente com o da biblioteca.

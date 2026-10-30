@@ -1,12 +1,12 @@
 ---
 /**
  * Galeria de aplicações — fase "prova" da biblioteca B2, com o desvio visual aprovado para a
- * Safe Mine (mockup das aplicações sobre chamas, 29/10/2026 — docs/BRIEFING.md).
+ * Safe Mine (mockup claro das aplicações, 30/10/2026 — docs/BRIEFING.md).
  *
- * Fundo escuro com chamas nas bordas (imagem em sangria total por baixo do respiro da
- * seção), cabeçalho centrado em branco e 4 cards brancos com foto, texto e o rodapé
- * "Solicitar cotação". O card inteiro é clicável por um botão sem texto que o cobre
- * (`data-cta="aplicacoes-{id}"`, rótulo em `aria-label`).
+ * Fundo claro com chamas suaves nos cantos de baixo (imagem em sangria total por baixo do
+ * respiro da seção), cabeçalho à esquerda com a segunda linha do título em verde e 4 cards
+ * brancos com foto, texto e o rodapé "Solicitar cotação". O card inteiro é clicável por um
+ * botão sem texto que o cobre (`data-cta="aplicacoes-{id}"`, rótulo em `aria-label`).
  *
  * Atenção: `npm run compose` sobrescreve este arquivo com o da biblioteca. Para recompor a
  * LP sem perder o mockup, restaure-o do git depois do compose.
@@ -18,7 +18,7 @@ import type { SectionProps } from '@lib/layout'
 import { cta } from '@data/content'
 import { applications } from '@data/sections/aplicacoes'
 
-import fundo from '@assets/fundo-chamas.jpg'
+import fundo from '@assets/fundo-chamas-claro.jpg'
 
 type Props = SectionProps
 
@@ -31,9 +31,9 @@ const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
 ---
 
 <Section id="aplicacoes" tone={tone} rhythm={rhythm} class="relative isolate overflow-hidden">
-  {/* Fundo: chamas nas bordas, centro escuro. A foto encaixa pela largura, ancorada embaixo,
-      para as chamas laterais não serem cortadas; acima dela, o mesmo azul do topo da foto. */}
-  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[rgb(4_30_55)]">
+  {/* Fundo: claro, com chamas suaves nos cantos de baixo. A foto encaixa pela largura,
+      ancorada embaixo; acima dela, o mesmo tom claro do fundo da foto. */}
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[#f7fcfe]">
     <Image
       src={fundo}
       alt=""
@@ -42,23 +42,22 @@ const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
       sizes="100vw"
       loading="lazy"
       decoding="async"
-      class="absolute bottom-0 left-0 h-auto w-full min-w-[56rem] max-w-none sm:min-w-0 max-sm:left-1/2 max-sm:-translate-x-1/2"
+      class="absolute bottom-0 left-0 h-auto w-full max-w-none min-w-[48rem] max-sm:left-1/2 max-sm:-translate-x-1/2 sm:min-w-0"
     />
-    <div class="absolute inset-0 bg-[linear-gradient(180deg,rgb(4_30_55)_0%,rgb(4_30_55/0.6)_22%,transparent_45%)]"></div>
   </div>
 
-  <div class="pt-4 pb-8 lg:pt-6 lg:pb-10">
-    {/* Cabeçalho centrado */}
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="inline-flex items-center gap-3 font-sans text-[12px] font-semibold tracking-[0.24em] text-neutral-light/85 uppercase sm:text-[13px]">
-        <span aria-hidden="true" class="size-2 shrink-0 bg-accent-orange"></span>
+  <div class="pt-4 pb-10 lg:pt-6 lg:pb-14">
+    {/* Cabeçalho à esquerda: traço verde, eyebrow, título com a segunda linha em verde */}
+    <div class="max-w-5xl">
+      <span aria-hidden="true" class="block h-1 w-12 rounded-full bg-accent-orange"></span>
+      <p class="mt-4 font-sans text-[12px] font-bold tracking-[0.24em] text-ink-soft uppercase sm:text-[13px]">
         {applications.eyebrow}
       </p>
-      <h2 class="mx-auto mt-4 max-w-4xl font-display text-[2.1rem] leading-[1.08] font-extrabold tracking-[-0.02em] text-neutral-light sm:text-[2.7rem] lg:text-[3.1rem]">
+      <h2 class="mt-3 font-display text-[2.3rem] leading-[1.04] font-extrabold tracking-[-0.035em] text-primary-dark-900 sm:text-[3rem] lg:text-[3.6rem] xl:text-[4rem]">
         {tituloA} <br class="hidden sm:inline" />
-        {tituloB}
+        <span class="text-accent-orange">{tituloB}</span>
       </h2>
-      <p class="mx-auto mt-5 max-w-3xl font-sans text-[16px] leading-relaxed text-neutral-light/75 sm:text-[17px]">
+      <p class="mt-5 font-sans text-[16px] leading-relaxed text-ink-soft sm:text-[18px] lg:text-[19px]">
         {applications.text}
       </p>
     </div>
@@ -66,7 +65,7 @@ const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
     {/* Quatro cards */}
     <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 xl:gap-5">
       {applications.items.map((app) => (
-        <li class="app-card group relative flex flex-col overflow-hidden rounded-2xl bg-neutral-light shadow-[0_30px_60px_-30px_rgba(0,0,0,0.85)] ring-1 ring-white/10 transition-transform duration-300 ease-out hover:-translate-y-1.5">
+        <li class="app-card group relative flex flex-col overflow-hidden rounded-2xl bg-neutral-light shadow-[0_26px_50px_-30px_rgba(10,29,77,0.4)] ring-1 ring-primary-dark/[0.06] transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_34px_60px_-30px_rgba(10,29,77,0.5)]">
           <div class="relative aspect-[4/3] overflow-hidden bg-primary-dark-900">
             <Image
               src={app.photo.src}
