@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+/* Manrope servida pelo próprio site (com preload no Layout): sem a troca tardia de fonte do
+   Google Fonts, que deslocava o hero e estourava o CLS no Lighthouse CI (0,109 no Linux). */
+@import '@fontsource-variable/manrope/wght.css';
 
 /* ---------------------------------------------------------------------------
    Tokens do padrão B2 (PROMPT-PADRAO-LP, item 2).
@@ -22,9 +25,13 @@
 
   --container-page: 1320px;
 
-  /* Uma única família para títulos e corpo; o peso e o tracking fazem a hierarquia. */
-  --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif;
-  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  /* Uma única família para títulos e corpo; o peso e o tracking fazem a hierarquia.
+     Reserva com métricas de Arial: uma reserva larga (DejaVu, no Linux) quebrava o H1 em
+     mais linhas até a fonte chegar e deslocava o hero. */
+  --font-display:
+    'Manrope Variable', 'Manrope', Arial, Helvetica, 'Liberation Sans', ui-sans-serif, sans-serif;
+  --font-sans:
+    'Manrope Variable', 'Manrope', Arial, Helvetica, 'Liberation Sans', ui-sans-serif, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 

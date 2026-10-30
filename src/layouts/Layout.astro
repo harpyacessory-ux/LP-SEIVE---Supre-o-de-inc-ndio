@@ -1,5 +1,6 @@
 ---
 import { getImage } from 'astro:assets'
+import manropeLatin from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url'
 import logoImg from '../assets/LOGO.png'
 import '../styles/global.css'
 import {
@@ -70,12 +71,9 @@ const jsonLd = {
       imagesizes="(min-width: 1280px) 1150px, (min-width: 1024px) 85vw, 165vw"
       fetchpriority="high"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    {/* Manrope servida pelo próprio site (global.css), pré-carregada para chegar antes da
+        primeira pintura e não deslocar o hero quando troca a fonte de reserva. */}
+    <link rel="preload" as="font" type="font/woff2" href={manropeLatin} crossorigin />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
   </head>

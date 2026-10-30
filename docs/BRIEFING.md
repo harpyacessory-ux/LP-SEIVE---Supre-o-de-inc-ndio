@@ -188,6 +188,7 @@ A pedido do usuário, `src/components/sections/ApplicationsGallery.astro` (seç�
 - `npm run screens` falha nesta pasta: o script monta o comando com `shell: true` e o caminho tem espaços. As capturas foram feitas com os mesmos parâmetros (porta 4873, Playwright 1.58.2, `?screens=1` e `?grid=1`), com caminho relativo e 5 s de espera.
 - Correção a levar para a biblioteca: em `processo`, quando nenhuma etapa tem prazo (a regra da seção manda omitir), o `as const` do exemplo faz o componente não compilar.
 - Brilho dos botões de `identificar` e `diferenciais` tem laranja fixo em rgba no código da biblioteca, fora dos tokens.
+- **Fonte servida pelo próprio site (30/10/2026).** O Lighthouse CI do GitHub (Linux) reprovou o CLS em 0,109 (limite 0,1): a Manrope vinha do Google Fonts e, até chegar, a reserva larga do Linux (DejaVu) quebrava o H1 em mais linhas. Como na LP da Print Master, a Manrope passou a vir de `@fontsource-variable/manrope@5.3.0` (import em `global.css`, preload do woff2 latino no `Layout.astro`), com reserva de métricas de Arial/Liberation Sans. Lighthouse local depois da troca: CLS 0,000, desempenho 0,99–1. Correção a levar para o template do starter.
 
 ## Estado da entrega
 
