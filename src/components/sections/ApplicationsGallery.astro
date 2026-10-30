@@ -39,8 +39,9 @@ const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
   class="relative isolate z-[1] -mb-6 overflow-hidden"
 >
   {/* Fundo: claro, com chamas suaves nos cantos de baixo. A foto encaixa pela largura,
-      ancorada embaixo; acima dela, o mesmo tom claro do fundo da foto. */}
-  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[#f7fcfe]">
+      ancorada embaixo; acima dela, branco. A base da foto foi neutralizada para branco puro,
+      o mesmo da seção do kit logo acima. */}
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-neutral-light">
     <Image
       src={fundo}
       alt=""
