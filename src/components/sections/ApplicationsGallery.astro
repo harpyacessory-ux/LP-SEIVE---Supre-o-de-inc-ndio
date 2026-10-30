@@ -30,8 +30,8 @@ const tituloA = quebra > 0 ? applications.title.slice(0, quebra) : applications.
 const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
 ---
 
-{/* -mb-6 + z-[1]: o fundo com as chamas cobre o respiro de 24px (pt-6) da seção seguinte,
-    para as chamas irem até o bloco navy dos diferenciais, sem faixa cinza no meio. */}
+{/* -mb-6 + z-[1]: o fundo com as chamas cobre o respiro de 24px (pt-6) da seção seguinte;
+    o degradê no pé leva o branco e as chamas até o cinza dos diferenciais, sem corte reto. */}
 <Section
   id="aplicacoes"
   tone={tone}
@@ -52,6 +52,7 @@ const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
       decoding="async"
       class="absolute bottom-0 left-0 h-auto w-full max-w-none min-w-[48rem] max-sm:left-1/2 max-sm:-translate-x-1/2 sm:min-w-0"
     />
+    <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-neutral-gray-100"></div>
   </div>
 
   <div class="pt-4 pb-10 lg:pt-6 lg:pb-14">

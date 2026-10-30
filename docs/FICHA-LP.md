@@ -362,9 +362,9 @@ blocos:
     papeis: [Gestores de segurança, Gestores de manutenção]
     eyebrow: Diferenciais SEIVE
     titleLines: [Proteção de ativos, com tecnologia SEIVE.]
-    text: A Safe Mine fornece o sistema SEIVE com atendimento consultivo — a solução é indicada conforme a máquina, a aplicação e o ambiente de cada operação.
+    text: A Safe Mine fornece o sistema SEIVE com atendimento consultivo. A solução é indicada conforme a máquina, a aplicação e o ambiente de cada operação.
     scene: Acionador SEIVE instalado em máquina
-    person: Especialista da Safe Mine
+    person: Especialista da Safe Mine de capacete, com os braços cruzados
     reasons:
       - icon: zap
         title: Detecção e atuação
@@ -372,7 +372,7 @@ blocos:
       - icon: power
         title: Acionamento manual
         description: Possibilidade de intervenção manual por botoeiras.
-      - icon: cpu
+      - icon: gear
         title: Painel de monitoramento
         description: Status do sistema e registro dos últimos 2.000 eventos.
       - icon: shield

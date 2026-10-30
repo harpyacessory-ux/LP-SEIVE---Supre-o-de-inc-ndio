@@ -181,6 +181,18 @@ A pedido do usuário, `src/components/sections/ApplicationsGallery.astro` (seç�
 - Cabeçalho à esquerda: traço verde, eyebrow "Aplicações do sistema SEIVE" e título em duas linhas a partir do tablet, a segunda ("e equipamentos móveis") em verde.
 - Quatro cards brancos com foto, título, descrição e o rodapé "Solicitar cotação →"; cada card é inteiro clicável por um botão sem texto que o cobre (`data-cta="aplicacoes-{id}"`).
 - A foto de construção passou a ser a escavadeira com o reservatório SEIVE, recortada do banner do hero (1120×840).
+- O pé da seção tem um degradê do branco para o cinza dos diferenciais, para as chamas não terminarem num corte reto.
+- **Atenção:** `npm run compose` sobrescreve este componente com o da biblioteca.
+
+## Desvio aprovado: diferenciais no mockup da Safe Mine (30/10/2026)
+
+A pedido do usuário, `src/components/sections/WhyBrand.astro` (seção `diferenciais`) segue o mockup "Smiling fire-safety technician on SEIVE page.png":
+
+- Fundo claro (o tom da composição). Texto à esquerda: traço verde e eyebrow, título em duas linhas com a segunda ("com tecnologia SEIVE.") em verde, texto, CTA "Solicitar cotação" e o selo com ícone de conversa "Conte qual equipamento você precisa proteger.".
+- À direita, a foto do acionador (`cenario.jpg`) em card arredondado, com o técnico (`pessoa.png`) sobreposto na metade direita, do capacete ao quadril.
+- Os 5 diferenciais saíram dos cards sobrepostos e foram para uma barra navy abaixo — é o bloco navy da segunda metade da página. Cinco lado a lado a partir de 1280 px; abaixo disso, duas colunas e, no celular, uma. O ícone do painel passou de `cpu` para `gear`, como no mockup.
+- O container da página (1320 px) é mais estreito que o do mockup: na barra, ícone, espaçamento e texto foram reduzidos para as descrições caberem em duas linhas.
+- Token novo: `--color-brand-green` (#7ba249), só para os ícones sobre a barra navy.
 - **Atenção:** `npm run compose` sobrescreve este componente com o da biblioteca.
 
 ## Desvios técnicos da execução

@@ -1,11 +1,12 @@
 /**
  * Dados da seção "Diferenciais" (biblioteca B2, fase: autoridade).
  *
- * Bloco navy em largura total com a frase de autoridade e a pessoa recortada, e 5
- * cards sobrepostos à base do bloco. São 5 exatos: o grid é `lg:grid-cols-5`.
+ * No mockup da Safe Mine (30/10/2026): texto à esquerda, foto do acionador em card com o
+ * técnico sobreposto à direita e os 5 diferenciais numa barra navy abaixo. São 5 exatos:
+ * a barra é `lg:grid-cols-5`.
  *
- * `cenario.jpg` é a foto do acionador SEIVE publicada pela Safe Mine; `pessoa.png`
- * segue como placeholder — a ficha declara o slot `diferenciais` em `assets.pendentes`.
+ * `cenario.jpg` é a foto do acionador SEIVE publicada pela Safe Mine; `pessoa.png` é o
+ * recorte do técnico enviado pelo cliente (capacete ao quadril, fundo transparente).
  */
 import type { IconName } from '@data/icons'
 import type { Photo } from '@data/types'
@@ -22,16 +23,18 @@ export interface Reason {
 
 export const why = {
   eyebrow: 'Diferenciais SEIVE',
-  /** Cada item é uma linha do H2 (quebra forçada). 3–6 palavras no total. */
+  /** Cada item é uma linha do H2 (quebra forçada); a segunda sai em verde. 3–6 palavras. */
   titleLines: ['Proteção de ativos', 'com tecnologia SEIVE.'],
-  text: `A ${site.brandShort} fornece o sistema SEIVE com atendimento consultivo — a solução é indicada conforme a máquina, a aplicação e o ambiente de cada operação.`,
+  text: `A ${site.brandShort} fornece o sistema SEIVE com atendimento consultivo. A solução é indicada conforme a máquina, a aplicação e o ambiente de cada operação.`,
+  /** Selo sob o botão. */
+  trust: { icon: 'chat', label: 'Conte qual equipamento você precisa proteger.' },
   scene: {
     src: cenario,
     alt: 'Acionador SEIVE instalado em máquina',
   },
   person: {
     src: pessoa,
-    alt: `Especialista da ${site.brandShort}`,
+    alt: `Especialista da ${site.brandShort} de capacete, com os braços cruzados`,
   },
   reasons: [
     {
@@ -45,7 +48,7 @@ export const why = {
       description: 'Possibilidade de intervenção manual por botoeiras.',
     },
     {
-      icon: 'cpu',
+      icon: 'gear',
       title: 'Painel de monitoramento',
       description: 'Status do sistema e registro dos últimos 2.000 eventos.',
     },
@@ -62,8 +65,9 @@ export const why = {
   ],
 } as const satisfies {
   eyebrow: string
-  titleLines: readonly string[]
+  titleLines: readonly [string, string]
   text: string
+  trust: { icon: IconName; label: string }
   scene: Photo
   person: Photo
   reasons: readonly [Reason, Reason, Reason, Reason, Reason]
