@@ -192,8 +192,18 @@ A pedido do usuário, `src/components/sections/WhyBrand.astro` (seção `diferen
 - À direita, a foto do acionador (`cenario.jpg`) em card arredondado, com o técnico (`pessoa.png`) sobreposto na metade direita, do capacete ao quadril.
 - Os 5 diferenciais saíram dos cards sobrepostos e foram para uma barra navy abaixo — é o bloco navy da segunda metade da página. Cinco lado a lado a partir de 1280 px; abaixo disso, duas colunas e, no celular, uma. O ícone do painel passou de `cpu` para `gear`, como no mockup.
 - O container da página (1320 px) é mais estreito que o do mockup: na barra, ícone, espaçamento e texto foram reduzidos para as descrições caberem em duas linhas.
-- Token novo: `--color-brand-green` (#7ba249), só para os ícones sobre a barra navy.
+- Token novo: `--color-brand-green` (#7ba249), só para ícones sobre fundo navy (barra dos diferenciais e rodapé).
 - **Atenção:** `npm run compose` sobrescreve este componente com o da biblioteca.
+
+## Desvio aprovado: cotação e rodapé no mockup da Safe Mine (30/10/2026)
+
+A pedido do usuário, `QuoteForm.astro` e `Footer.astro` (estrutura fixa) seguem o mockup "Premium fire suppression quote section.png":
+
+- Cotação: fundo claro com duas formas claras bem suaves; grid `0.85fr · 1fr`. O slot do formulário fica num card branco arredondado; fora do WordPress o texto cru do shortcode é escondido por CSS e o card fica vazio, como no mockup. Abaixo, a nota de LGPD com ícone de cadeado (ícone novo `lock`).
+- À direita: eyebrow com quadrado verde, título em duas linhas com "supressão de incêndio." em verde (`quote.highlight`), texto, botão "Chamar no WhatsApp" **verde** com o ícone do WhatsApp (o padrão pedia navy para não competir com o envio do formulário; o mockup pede verde) e os três selos com ícones grandes e divisórias.
+- O ícone `whatsapp` ganhou o fone dentro do balão, como no mockup — vale também para o botão flutuante.
+- Rodapé: navy sólido (`primary-dark-900`) com filete verde de 2px no topo, no lugar do `navy-premium`; mesma linha copyright · endereço · crédito da B2.
+- A assinatura A8 de `scripts/check-lp.mjs` foi repinada para a cotação e o rodapé.
 
 ## Desvios técnicos da execução
 

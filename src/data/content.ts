@@ -108,6 +108,8 @@ export const hero = {
 export const quote = {
   eyebrow: 'Solicite sua cotação',
   title: 'Fale com quem entende de supressão de incêndio.',
+  /** Trecho do título que sai em verde, numa segunda linha (mockup da cotação). */
+  highlight: 'supressão de incêndio.',
   text: 'Solicite uma avaliação comercial para proteção contra incêndio em sua operação. Preencha o formulário ou fale direto conosco pelo WhatsApp.',
   trust: [
     { icon: 'zap', label: 'Detecção e atuação automáticas' },
@@ -119,6 +121,7 @@ export const quote = {
 } as const satisfies {
   eyebrow: string
   title: string
+  highlight: string
   text: string
   trust: readonly [TrustItem, TrustItem, TrustItem]
   lgpd: string

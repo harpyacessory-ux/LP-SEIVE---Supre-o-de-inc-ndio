@@ -192,6 +192,8 @@ for (const f of astroFiles) {
   // Header e Hero repinados para a abertura clara da Safe Mine (mockup aprovado em 29/10/2026,
   // registrado em docs/BRIEFING.md): barra branca flutuante com duas âncoras e hero claro com
   // a cena em card, o produto sobreposto, o slot do chat e a faixa de três pontos.
+  // Cotação e Footer repinados para o mockup da cotação (30/10/2026): formulário em card
+  // (grid 0.85fr · 1fr) e rodapé navy sólido com filete verde.
   const expect = {
     'Header.astro': ['fixed inset-x-0 top-0 z-50', 'header-nav', 'data-cta="header-cta"'],
     'Hero.astro': [
@@ -205,12 +207,13 @@ for (const f of astroFiles) {
     ],
     'QuoteForm.astro': [
       'id="cotacao"',
-      'lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]',
+      'lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)]',
       'order-2 w-full lg:order-1',
+      'data-shortcode-slot',
       'data-cta="cotacao-whatsapp"',
     ],
     'Footer.astro': [
-      'navy-premium border-t border-white/15',
+      'border-t-2 border-accent-orange bg-primary-dark-900',
       'getFullYear()',
       '<address',
       'noopener noreferrer',
