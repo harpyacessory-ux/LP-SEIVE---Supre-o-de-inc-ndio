@@ -30,7 +30,14 @@ const tituloA = quebra > 0 ? applications.title.slice(0, quebra) : applications.
 const tituloB = quebra > 0 ? applications.title.slice(quebra + 1) : ''
 ---
 
-<Section id="aplicacoes" tone={tone} rhythm={rhythm} class="relative isolate overflow-hidden">
+{/* -mb-6 + z-[1]: o fundo com as chamas cobre o respiro de 24px (pt-6) da seção seguinte,
+    para as chamas irem até o bloco navy dos diferenciais, sem faixa cinza no meio. */}
+<Section
+  id="aplicacoes"
+  tone={tone}
+  rhythm={rhythm}
+  class="relative isolate z-[1] -mb-6 overflow-hidden"
+>
   {/* Fundo: claro, com chamas suaves nos cantos de baixo. A foto encaixa pela largura,
       ancorada embaixo; acima dela, o mesmo tom claro do fundo da foto. */}
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[#f7fcfe]">
